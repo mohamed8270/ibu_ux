@@ -1,3 +1,5 @@
+import 'package:gap/gap.dart';
+
 class StaticData {
   // icons
   static String leftarrow =
@@ -17,4 +19,10 @@ class StaticData {
       'Relate to our creative works that are beyond your expectations';
   static String herosub =
       'Developer with solid design and development expertise';
+
+// space
+  static const Gap gap1 = Gap(5);
+  static const Gap gap2 = Gap(10);
+  static const Gap gap3 = Gap(15);
+  static const Gap gap4 = Gap(20);
 }
