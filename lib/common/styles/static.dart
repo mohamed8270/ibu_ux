@@ -15,6 +15,9 @@ class StaticData {
   static String github = 'https://www.svgrepo.com/show/501576/github.svg';
 
   // text
+  static String appname = 'Ibu ux';
+  static String home = 'Home';
+  static String about = 'About us';
   static String hertxt =
       'Relate to our creative works that are beyond your expectations';
   static String herosub =
