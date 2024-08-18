@@ -15,11 +15,14 @@ class HomePage extends StatelessWidget {
         preferredSize: Size(scrnsize.width, 80),
         child: const HomeAppBar(),
       ),
-      body: const Column(
-        children: [
-          HeroSection(),
-          AboutUsSection(),
-        ],
+      body: const SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            HeroSection(),
+            AboutUsSection(),
+          ],
+        ),
       ),
     );
   }

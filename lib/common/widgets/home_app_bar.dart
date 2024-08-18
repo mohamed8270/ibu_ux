@@ -12,10 +12,10 @@ class HomeAppBar extends StatelessWidget {
     var scrnsize = MediaQuery.sizeOf(context);
     var txt = TextFond();
     return Container(
-      decoration: const BoxDecoration(color: Colors.red),
+      decoration: const BoxDecoration(color: Colors.transparent),
       alignment: Alignment.center,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 40),
+        padding: const EdgeInsets.symmetric(horizontal: 60),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [

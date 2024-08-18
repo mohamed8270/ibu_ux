@@ -26,6 +26,8 @@ class StaticData {
       'Relate to our creative works that are beyond your expectations';
   static String herosub =
       'Developer with solid design and development expertise';
+  static String aboutcontent =
+      'Developer with solid design and development expertise, We build websites, Mobile applications, and elaborate online business services';
 
 // space
   static const Gap gap1 = Gap(5);

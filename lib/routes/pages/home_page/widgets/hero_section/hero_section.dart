@@ -21,8 +21,9 @@ class HeroSection extends StatelessWidget {
           filterQuality: FilterQuality.high,
         ),
       ),
+      alignment: Alignment.center,
       child: Padding(
-        padding: const EdgeInsets.all(30),
+        padding: const EdgeInsets.symmetric(horizontal: 60),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
