@@ -12,9 +12,10 @@ class HomeAppBar extends StatelessWidget {
     var scrnsize = MediaQuery.sizeOf(context);
     var txt = TextFond();
     return Container(
-      decoration: const BoxDecoration(color: iblack),
+      decoration: const BoxDecoration(color: Colors.red),
+      alignment: Alignment.center,
       child: Padding(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.symmetric(horizontal: 40),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -22,24 +23,25 @@ class HomeAppBar extends StatelessWidget {
             Expanded(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   txt.textWidget(
-                      StaticData.home, 14.0, FontWeight.w600, iwhite),
+                      StaticData.home, 12.0, FontWeight.w400, iwhite),
                   Gap(scrnsize.width / 20),
                   txt.textWidget(
-                      StaticData.about, 14.0, FontWeight.w600, iwhite),
+                      StaticData.about, 12.0, FontWeight.w400, iwhite),
                 ],
               ),
             ),
             Container(
               height: scrnsize.height * 0.055,
-              width: scrnsize.width * 0.15,
+              width: scrnsize.width * 0.1,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(40),
-                border: Border.all(width: 1.5, color: igrey),
+                border: Border.all(width: 1, color: iwhite),
               ),
               alignment: Alignment.center,
-              child: txt.textWidget('Contact', 14.0, FontWeight.w600, iwhite),
+              child: txt.textWidget('Contact', 12.0, FontWeight.w400, iwhite),
             ),
           ],
         ),

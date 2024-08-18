@@ -14,6 +14,10 @@ class StaticData {
   static String dribble = 'https://www.svgrepo.com/show/473590/dribble.svg';
   static String github = 'https://www.svgrepo.com/show/501576/github.svg';
 
+  // images
+  static String heroimg =
+      'https://i.pinimg.com/736x/f1/88/c6/f188c68502ed808b7e8ce4a49a781000.jpg';
+
   // text
   static String appname = 'Ibu ux';
   static String home = 'Home';

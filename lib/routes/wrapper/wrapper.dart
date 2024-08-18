@@ -10,6 +10,7 @@ class Wrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Ibu ux',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: iwhite),
         useMaterial3: true,
