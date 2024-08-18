@@ -16,10 +16,10 @@ class AboutUsSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          txt.textWidget(StaticData.about, 14.0, FontWeight.w500, iblack),
+          txt.textWidget(StaticData.about, 16.0, FontWeight.w500, iblack),
           SizedBox(
             width: scrnsize.width * 0.4,
-            child: txt.textWidget(StaticData.aboutcontent, 14.0,
+            child: txt.textWidget(StaticData.aboutcontent, 16.0,
                 FontWeight.w500, iblack, TextOverflow.visible),
           ),
         ],
