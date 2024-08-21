@@ -22,12 +22,15 @@ class StaticData {
   static String appname = 'Ibu ux';
   static String home = 'Home';
   static String about = 'About us';
+  static String offering = "What We're Good At";
   static String hertxt =
       'Relate to our creative works that are beyond your expectations';
   static String herosub =
       'Developer with solid design and development expertise';
   static String aboutcontent =
       'Developer with solid design and development expertise, We build websites, Mobile applications, and elaborate online business services';
+  static String offerC1 =
+      'User-Centric Approach: we beleive that design should revolve aound the needs and designs of your users';
 
 // space
   static const Gap gap1 = Gap(5);
