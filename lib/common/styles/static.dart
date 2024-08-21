@@ -31,6 +31,8 @@ class StaticData {
       'Developer with solid design and development expertise, We build websites, Mobile applications, and elaborate online business services';
   static String offerC1 =
       'User-Centric Approach: we beleive that design should revolve aound the needs and designs of your users';
+  static String offerC2 =
+      'Build with Architecture: Get your application done with architecture to provide a best foundation';
 
 // space
   static const Gap gap1 = Gap(5);
