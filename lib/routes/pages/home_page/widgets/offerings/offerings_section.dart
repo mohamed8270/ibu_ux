@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:ibu_ux/common/styles/fonts.dart';
 import 'package:ibu_ux/common/styles/static.dart';
 import 'package:ibu_ux/common/styles/theme.dart';
@@ -47,7 +48,21 @@ class OfferingsSection extends StatelessWidget {
             title: 'App Development',
             content: StaticData.offerC2,
             widget: use.svgIcon(StaticData.arrowGo, 20.0, 20.0, iblack),
-          )
+          ),
+          use.dividerLine(scrnsize.width),
+          OfferingContent(
+            snum: '03',
+            title: 'Web Development',
+            content: StaticData.offerC2,
+            widget: use.svgIcon(StaticData.arrowGo, 20.0, 20.0, iblack),
+          ),
+          use.dividerLine(scrnsize.width),
+          OfferingContent(
+            snum: '04',
+            title: 'Digital Marketing',
+            content: StaticData.offerC2,
+            widget: use.svgIcon(StaticData.arrowGo, 20.0, 20.0, iblack),
+          ),
         ],
       ),
     );
@@ -75,19 +90,26 @@ class OfferingContent extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 20),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           txt.textWidget(snum, 20.0, FontWeight.w500, iblack),
+          Gap(scrnsize.width / 10),
+          SizedBox(
+            width: scrnsize.width * 0.2,
+            child: txt.textWidget(title, 20.0, FontWeight.w500, iblack),
+          ),
+          Gap(scrnsize.width / 10),
           SizedBox(
             width: scrnsize.width * 0.3,
-            child: txt.textWidget(title, 20.0, FontWeight.w500, iblack,
-                TextOverflow.visible, 1.5, TextAlign.center),
+            child: txt.textWidget(
+                content,
+                13.0,
+                FontWeight.w500,
+                iblack.withOpacity(0.45),
+                TextOverflow.visible,
+                1.5,
+                TextAlign.start),
           ),
-          SizedBox(
-            width: scrnsize.width * 0.3,
-            child: txt.textWidget(context, 13.0, FontWeight.w500,
-                iblack.withOpacity(0.45), TextOverflow.visible),
-          ),
+          Gap(scrnsize.width / 10),
           widget,
         ],
       ),
