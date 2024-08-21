@@ -13,6 +13,8 @@ class StaticData {
       'https://www.svgrepo.com/show/512419/linkedin-161.svg';
   static String dribble = 'https://www.svgrepo.com/show/473590/dribble.svg';
   static String github = 'https://www.svgrepo.com/show/501576/github.svg';
+  static String arrowGo =
+      'https://www.svgrepo.com/show/521969/arrow-right-circle.svg';
 
   // images
   static String heroimg =

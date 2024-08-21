@@ -46,7 +46,7 @@ class OfferingsSection extends StatelessWidget {
             snum: '02',
             title: 'App Development',
             content: StaticData.offerC2,
-            widget: use.svgIcon('', 20.0, 20.0, iblack),
+            widget: use.svgIcon(StaticData.arrowGo, 20.0, 20.0, iblack),
           )
         ],
       ),
