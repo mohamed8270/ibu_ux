@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ibu_ux/common/styles/fonts.dart';
 import 'package:ibu_ux/common/styles/static.dart';
 import 'package:ibu_ux/common/styles/theme.dart';
+import 'package:ibu_ux/data/repository/local_data_repository.dart';
 
 class LatestProjects extends StatelessWidget {
   const LatestProjects({super.key});
@@ -10,10 +12,11 @@ class LatestProjects extends StatelessWidget {
   Widget build(BuildContext context) {
     final scrnsize = MediaQuery.sizeOf(context);
     var txt = TextFond();
-
+    var data = Get.put(LocalDataRepository());
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 40),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           txt.textWidget(StaticData.projects, 38.0, FontWeight.w500, iblack),
           GridView.builder(
@@ -23,8 +26,10 @@ class LatestProjects extends StatelessWidget {
                 mainAxisSpacing: 2,
                 crossAxisSpacing: 2,
                 childAspectRatio: scrnsize.width / scrnsize.height * 1.4),
+            itemCount: data.porjectsData.length,
             itemBuilder: (context, i) {
-              return GridCard(url: StaticData.heroimg2);
+              final img = data.porjectsData[i];
+              return GridCard(url: img['img'].toString());
             },
           ),
         ],
