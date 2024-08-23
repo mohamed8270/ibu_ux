@@ -72,7 +72,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                           maintainState: true,
                           maintainSize: true,
                           visible: isHover[1],
-                          child: Container(height: 2, width: 20, color: iwhite),
+                          child: Container(height: 2, width: 15, color: iwhite),
                         ),
                       ],
                     ),
