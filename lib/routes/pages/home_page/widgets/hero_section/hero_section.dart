@@ -16,7 +16,7 @@ class HeroSection extends StatelessWidget {
       decoration: BoxDecoration(
         color: iviolet,
         image: DecorationImage(
-          image: NetworkImage(StaticData.heroimg),
+          image: NetworkImage(StaticData.heroimg2),
           fit: BoxFit.cover,
           filterQuality: FilterQuality.high,
         ),

@@ -19,6 +19,7 @@ class StaticData {
   // images
   static String heroimg =
       'https://i.pinimg.com/736x/f1/88/c6/f188c68502ed808b7e8ce4a49a781000.jpg';
+  static String heroimg2 = 'https://images3.alphacoders.com/830/83067.jpg';
 
   // text
   static String appname = 'Ibu ux';
