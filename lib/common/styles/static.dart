@@ -17,9 +17,9 @@ class StaticData {
       'https://www.svgrepo.com/show/521969/arrow-right-circle.svg';
 
   // images
-  static String heroimg =
-      'https://i.pinimg.com/736x/f1/88/c6/f188c68502ed808b7e8ce4a49a781000.jpg';
   static String heroimg2 = 'https://images3.alphacoders.com/830/83067.jpg';
+  static String notesapp =
+      'https://ewppkbcteahivyqotzoa.supabase.co/storage/v1/object/public/images/dark%20theme.jpg';
 
   // text
   static String appname = 'Ibu ux';

@@ -34,7 +34,7 @@ class OfferingsSection extends StatelessWidget {
                   color: iviolet,
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                    image: NetworkImage(StaticData.heroimg),
+                    image: NetworkImage(StaticData.notesapp),
                     fit: BoxFit.cover,
                     filterQuality: FilterQuality.high,
                   ),
