@@ -3,16 +3,24 @@ import 'package:get/get.dart';
 import 'package:ibu_ux/common/styles/fonts.dart';
 import 'package:ibu_ux/common/styles/static.dart';
 import 'package:ibu_ux/common/styles/theme.dart';
+import 'package:ibu_ux/common/widgets/rusable_widgets.dart';
 import 'package:ibu_ux/data/repository/local_data_repository.dart';
 
-class LatestProjects extends StatelessWidget {
+class LatestProjects extends StatefulWidget {
   const LatestProjects({super.key});
 
   @override
+  State<LatestProjects> createState() => _LatestProjectsState();
+}
+
+class _LatestProjectsState extends State<LatestProjects> {
+  var txt = TextFond();
+  var data = Get.put(LocalDataRepository());
+  bool isHover = false;
+  var use = ReusableWidgets();
+  @override
   Widget build(BuildContext context) {
     final scrnsize = MediaQuery.sizeOf(context);
-    var txt = TextFond();
-    var data = Get.put(LocalDataRepository());
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 80),
       child: Column(
@@ -24,10 +32,22 @@ class LatestProjects extends StatelessWidget {
             children: [
               txt.textWidget(
                   StaticData.projects, 38.0, FontWeight.w500, iblack),
-              GestureDetector(
-                onTap: () {},
-                child:
+              InkWell(
+                onHover: (value) {
+                  setState(() {
+                    isHover = value;
+                  });
+                },
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
                     txt.textWidget('See all', 14.0, FontWeight.w500, iviolet),
+                    StaticData.gap1,
+                    isHover
+                        ? use.svgIcon(StaticData.arrowGo, 14.0, 14.0, iviolet)
+                        : const SizedBox(),
+                  ],
+                ),
               ),
             ],
           ),

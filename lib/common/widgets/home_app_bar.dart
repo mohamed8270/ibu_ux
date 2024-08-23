@@ -4,9 +4,15 @@ import 'package:ibu_ux/common/styles/fonts.dart';
 import 'package:ibu_ux/common/styles/static.dart';
 import 'package:ibu_ux/common/styles/theme.dart';
 
-class HomeAppBar extends StatelessWidget {
+class HomeAppBar extends StatefulWidget {
   const HomeAppBar({super.key});
 
+  @override
+  State<HomeAppBar> createState() => _HomeAppBarState();
+}
+
+class _HomeAppBarState extends State<HomeAppBar> {
+  List<bool> isHover = [false, false];
   @override
   Widget build(BuildContext context) {
     var scrnsize = MediaQuery.sizeOf(context);
@@ -25,11 +31,49 @@ class HomeAppBar extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  txt.textWidget(
-                      StaticData.home, 12.0, FontWeight.w400, iwhite),
+                  Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      InkWell(
+                        onHover: (value) {
+                          setState(() {
+                            isHover[0] = value;
+                          });
+                        },
+                        child: txt.textWidget(
+                            StaticData.home, 12.0, FontWeight.w400, iwhite),
+                      ),
+                      Visibility(
+                        maintainAnimation: true,
+                        maintainState: true,
+                        maintainSize: true,
+                        visible: isHover[0],
+                        child: Container(height: 2, width: 15, color: iwhite),
+                      ),
+                    ],
+                  ),
                   Gap(scrnsize.width / 20),
-                  txt.textWidget(
-                      StaticData.about, 12.0, FontWeight.w400, iwhite),
+                  Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      InkWell(
+                        onHover: (value) {
+                          setState(() {
+                            isHover[1] = value;
+                          });
+                        },
+                        child: txt.textWidget(
+                            StaticData.about, 12.0, FontWeight.w400, iwhite),
+                      ),
+                      Visibility(
+                        maintainAnimation: true,
+                        maintainState: true,
+                        maintainSize: true,
+                        visible: isHover[1],
+                        child: Container(height: 2, width: 15, color: iwhite),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
