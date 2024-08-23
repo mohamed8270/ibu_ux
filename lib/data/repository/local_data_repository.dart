@@ -22,5 +22,15 @@ class LocalDataRepository extends GetxController {
       'img':
           'https://ewppkbcteahivyqotzoa.supabase.co/storage/v1/object/public/images/artisans.jpg',
     },
+    {
+      'name': 'IoT Application',
+      'img':
+          'https://ewppkbcteahivyqotzoa.supabase.co/storage/v1/object/public/images/iot.jpg',
+    },
+    {
+      'name': 'Artisan Application',
+      'img':
+          'https://ewppkbcteahivyqotzoa.supabase.co/storage/v1/object/public/images/artisans.jpg',
+    },
   ];
 }
