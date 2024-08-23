@@ -3,6 +3,7 @@ import 'package:ibu_ux/common/widgets/home_app_bar.dart';
 import 'package:ibu_ux/routes/pages/home_page/widgets/about_us/about_us_section.dart';
 import 'package:ibu_ux/routes/pages/home_page/widgets/hero_section/hero_section.dart';
 import 'package:ibu_ux/routes/pages/home_page/widgets/offerings/offerings_section.dart';
+import 'package:ibu_ux/routes/pages/home_page/widgets/projects/latest_projects.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -24,6 +25,7 @@ class HomePage extends StatelessWidget {
             HeroSection(),
             AboutUsSection(),
             OfferingsSection(),
+            LatestProjects(),
           ],
         ),
       ),

@@ -26,6 +26,7 @@ class StaticData {
   static String home = 'Home';
   static String about = 'About us';
   static String offering = "What We're Good At";
+  static String projects = "Our latest project's";
   static String hertxt =
       'Relate to our creative works that are beyond your expectations';
   static String herosub =
