@@ -33,6 +33,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   InkWell(
+                    onTap: () {},
                     onHover: (value) {
                       setState(() {
                         isHover[0] = value;
@@ -49,13 +50,14 @@ class _HomeAppBarState extends State<HomeAppBar> {
                           maintainState: true,
                           maintainSize: true,
                           visible: isHover[0],
-                          child: Container(height: 2, width: 15, color: iwhite),
+                          child: Container(height: 2, width: 25, color: iwhite),
                         ),
                       ],
                     ),
                   ),
                   Gap(scrnsize.width / 20),
                   InkWell(
+                    onTap: () {},
                     onHover: (value) {
                       setState(() {
                         isHover[1] = value;
@@ -72,7 +74,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                           maintainState: true,
                           maintainSize: true,
                           visible: isHover[1],
-                          child: Container(height: 2, width: 15, color: iwhite),
+                          child: Container(height: 2, width: 25, color: iwhite),
                         ),
                       ],
                     ),

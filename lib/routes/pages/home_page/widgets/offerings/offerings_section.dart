@@ -88,30 +88,34 @@ class OfferingContent extends StatelessWidget {
     var txt = TextFond();
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          txt.textWidget(snum, 20.0, FontWeight.w500, iblack),
-          Gap(scrnsize.width / 10),
-          SizedBox(
-            width: scrnsize.width * 0.2,
-            child: txt.textWidget(title, 20.0, FontWeight.w500, iblack),
-          ),
-          Gap(scrnsize.width / 10),
-          SizedBox(
-            width: scrnsize.width * 0.3,
-            child: txt.textWidget(
-                content,
-                13.0,
-                FontWeight.w500,
-                iblack.withOpacity(0.45),
-                TextOverflow.visible,
-                1.5,
-                TextAlign.start),
-          ),
-          Gap(scrnsize.width / 10),
-          widget,
-        ],
+      child: InkWell(
+        onTap: () {},
+        onHover: (value) {},
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            txt.textWidget(snum, 20.0, FontWeight.w500, iblack),
+            Gap(scrnsize.width / 10),
+            SizedBox(
+              width: scrnsize.width * 0.2,
+              child: txt.textWidget(title, 20.0, FontWeight.w500, iblack),
+            ),
+            Gap(scrnsize.width / 10),
+            SizedBox(
+              width: scrnsize.width * 0.3,
+              child: txt.textWidget(
+                  content,
+                  13.0,
+                  FontWeight.w500,
+                  iblack.withOpacity(0.45),
+                  TextOverflow.visible,
+                  1.5,
+                  TextAlign.start),
+            ),
+            Gap(scrnsize.width / 10),
+            widget,
+          ],
+        ),
       ),
     );
   }

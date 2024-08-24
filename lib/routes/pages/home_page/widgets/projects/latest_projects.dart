@@ -33,21 +33,14 @@ class _LatestProjectsState extends State<LatestProjects> {
               txt.textWidget(
                   StaticData.projects, 38.0, FontWeight.w500, iblack),
               InkWell(
+                onTap: () {},
                 onHover: (value) {
                   setState(() {
                     isHover = value;
                   });
                 },
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    txt.textWidget('See all', 14.0, FontWeight.w500, iviolet),
-                    StaticData.gap1,
-                    isHover
-                        ? use.svgIcon(StaticData.arrowGo, 14.0, 14.0, iviolet)
-                        : const SizedBox(),
-                  ],
-                ),
+                child: txt.textWidget('See all', 14.0, FontWeight.w500,
+                    isHover ? iblack : iviolet),
               ),
             ],
           ),
