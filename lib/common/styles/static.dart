@@ -2,19 +2,15 @@ import 'package:gap/gap.dart';
 
 class StaticData {
   // icons
-  static String leftarrow =
-      'https://www.svgrepo.com/show/510041/left-arrow.svg';
-  static String rightarrow =
-      'https://www.svgrepo.com/show/510165/right-arrow.svg';
-  static String uparrow = 'https://www.svgrepo.com/show/510301/up-arrow.svg';
-  static String instagram = 'https://www.svgrepo.com/show/520798/instagram.svg';
-  static String youtube = 'https://www.svgrepo.com/show/521051/youtube.svg';
-  static String linkedin =
-      'https://www.svgrepo.com/show/512419/linkedin-161.svg';
-  static String dribble = 'https://www.svgrepo.com/show/473590/dribble.svg';
-  static String github = 'https://www.svgrepo.com/show/501576/github.svg';
-  static String arrowGo =
-      'https://www.svgrepo.com/show/521969/arrow-right-circle.svg';
+  static String leftarrow = 'assets/icons/left-arrow.svg';
+  static String rightarrow = 'assets/icons/right-arrow.svg';
+  static String uparrow = 'assets/icons/up-arrow.svg';
+  static String instagram = 'assets/icons/instagram.svg';
+  static String youtube = 'assets/icons/youtube.svg';
+  static String linkedin = 'assets/icons/linkedin.svg';
+  static String dribble = 'assets/icons/dribble.svg';
+  static String github = 'assets/icons/github.svg';
+  static String arrowGo = 'assets/icons/arrow-right-circle.svg';
 
   // images
   static String heroimg2 = 'https://images3.alphacoders.com/830/83067.jpg';

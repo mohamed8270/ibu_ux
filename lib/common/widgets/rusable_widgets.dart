@@ -5,7 +5,7 @@ import 'package:ibu_ux/common/styles/theme.dart';
 class ReusableWidgets {
   // svg icon network
   Widget svgIcon(icn, h, w, c) {
-    return SvgPicture.network(
+    return SvgPicture.asset(
       icn,
       height: h,
       width: w,
