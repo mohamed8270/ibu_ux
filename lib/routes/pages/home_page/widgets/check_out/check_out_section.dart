@@ -38,6 +38,7 @@ class CheckOutSection extends StatelessWidget {
                   url: out['img'].toString(),
                   title: out['name'].toString(),
                   content: out['des'].toString(),
+                  pl: i == 0 ? 60.0 : 20.0,
                 );
               },
             ),
@@ -53,18 +54,20 @@ class PlayfulContent extends StatelessWidget {
       {super.key,
       required this.url,
       required this.title,
-      required this.content});
+      required this.content,
+      required this.pl});
 
   final String url;
   final String title;
   final String content;
+  final double pl;
 
   @override
   Widget build(BuildContext context) {
     var scrnsize = MediaQuery.sizeOf(context);
     var txt = TextFond();
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: EdgeInsets.only(right: 20, left: pl),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
