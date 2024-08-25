@@ -39,6 +39,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                         isHover[0] = value;
                       });
                     },
+                    hoverColor: Colors.transparent,
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -63,6 +64,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                         isHover[1] = value;
                       });
                     },
+                    hoverColor: Colors.transparent,
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
