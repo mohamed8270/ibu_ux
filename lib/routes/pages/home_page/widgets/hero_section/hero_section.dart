@@ -28,7 +28,7 @@ class HeroSection extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            txt.textWidget(StaticData.hertxt, 50.0, FontWeight.w400, iwhite),
+            txt.textWidget(StaticData.hertxt, 60.0, FontWeight.w400, iwhite),
             StaticData.gap3,
             txt.textWidget(StaticData.herosub, 14.0, FontWeight.w300, iwhite),
           ],

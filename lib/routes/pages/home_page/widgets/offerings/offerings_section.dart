@@ -28,7 +28,7 @@ class _OfferingsSectionState extends State<OfferingsSection> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          txt.textWidget(StaticData.offering, 38.0, FontWeight.w500, iblack),
+          txt.textWidget(StaticData.offering, 48.0, FontWeight.w500, iblack),
           StaticData.gap4,
           use.dividerLine(scrnsize.width),
           OfferingContent(

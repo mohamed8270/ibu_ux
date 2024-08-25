@@ -11,7 +11,7 @@ class AboutUsSection extends StatelessWidget {
     var txt = TextFond();
     var scrnsize = MediaQuery.sizeOf(context);
     return Padding(
-      padding: const EdgeInsets.all(60),
+      padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 80),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

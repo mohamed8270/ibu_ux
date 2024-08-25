@@ -31,7 +31,7 @@ class _LatestProjectsState extends State<LatestProjects> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               txt.textWidget(
-                  StaticData.projects, 38.0, FontWeight.w500, iblack),
+                  StaticData.projects, 48.0, FontWeight.w500, iblack),
               InkWell(
                 onTap: () {},
                 onHover: (value) {
