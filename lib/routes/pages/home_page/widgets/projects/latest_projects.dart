@@ -39,6 +39,7 @@ class _LatestProjectsState extends State<LatestProjects> {
                     isHover = value;
                   });
                 },
+                hoverColor: Colors.transparent,
                 child: txt.textWidget('See all', 14.0, FontWeight.w500,
                     isHover ? iblack : iviolet),
               ),

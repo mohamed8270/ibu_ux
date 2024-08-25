@@ -64,9 +64,13 @@ class _OfferingsSectionState extends State<OfferingsSection> {
             snum: '02',
             title: 'App Development',
             content: StaticData.offerC2,
-            txtcolor: iblack,
+            txtcolor: isHover[1] ? iviolet : iblack,
             tap: () {},
-            hover: (p0) {},
+            hover: (p0) {
+              setState(() {
+                isHover[1] = p0;
+              });
+            },
             widget: use.svgIcon(StaticData.arrowGo, 20.0, 20.0, iblack),
           ),
           use.dividerLine(scrnsize.width),
@@ -74,9 +78,13 @@ class _OfferingsSectionState extends State<OfferingsSection> {
             snum: '03',
             title: 'Web Development',
             content: StaticData.offerC2,
-            txtcolor: iblack,
+            txtcolor: isHover[2] ? iviolet : iblack,
             tap: () {},
-            hover: (p0) {},
+            hover: (p0) {
+              setState(() {
+                isHover[2] = p0;
+              });
+            },
             widget: use.svgIcon(StaticData.arrowGo, 20.0, 20.0, iblack),
           ),
           use.dividerLine(scrnsize.width),
@@ -84,9 +92,13 @@ class _OfferingsSectionState extends State<OfferingsSection> {
             snum: '04',
             title: 'Digital Marketing',
             content: StaticData.offerC2,
-            txtcolor: iblack,
+            txtcolor: isHover[3] ? iviolet : iblack,
             tap: () {},
-            hover: (p0) {},
+            hover: (p0) {
+              setState(() {
+                isHover[3] = p0;
+              });
+            },
             widget: use.svgIcon(StaticData.arrowGo, 20.0, 20.0, iblack),
           ),
         ],
