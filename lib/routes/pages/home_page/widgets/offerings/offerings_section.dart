@@ -120,7 +120,7 @@ class OfferingContent extends StatelessWidget {
     var scrnsize = MediaQuery.sizeOf(context);
     var txt = TextFond();
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20),
+      padding: const EdgeInsets.symmetric(vertical: 50),
       child: InkWell(
         onTap: tap,
         onHover: hover,
