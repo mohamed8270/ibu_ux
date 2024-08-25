@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
 
   void scrollToTap(double offset) {
     scrollController.animateTo(offset,
-        duration: const Duration(seconds: 1), curve: Curves.easeInOut);
+        duration: const Duration(milliseconds: 800), curve: Curves.easeInOut);
   }
 
   @override
