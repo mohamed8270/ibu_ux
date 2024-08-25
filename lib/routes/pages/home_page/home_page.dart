@@ -53,10 +53,10 @@ class _HomePageState extends State<HomePage> {
         preferredSize: Size(scrnsize.width, 80),
         child: HomeAppBar(
           color: color,
-          homeTap: () {},
+          homeTap: () => scrollToTap(0),
           aboutTap: () => scrollToTap(500),
           serviceTap: () => scrollToTap(700),
-          contentTap: () => scrollToTap(2100),
+          contentTap: () => scrollToTap(2200),
         ),
       ),
       body: SingleChildScrollView(
