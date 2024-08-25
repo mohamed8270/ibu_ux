@@ -1,7 +1,7 @@
 import 'package:gap/gap.dart';
 
 class StaticData {
-  // icons
+// icons
   static String leftarrow = 'assets/icons/left-arrow.svg';
   static String rightarrow = 'assets/icons/right-arrow.svg';
   static String uparrow = 'assets/icons/up-arrow.svg';
@@ -12,12 +12,12 @@ class StaticData {
   static String github = 'assets/icons/github.svg';
   static String arrowGo = 'assets/icons/arrow-right-circle.svg';
 
-  // images
+// images
   static String heroimg2 = 'https://images3.alphacoders.com/830/83067.jpg';
   static String notesapp =
       'https://ewppkbcteahivyqotzoa.supabase.co/storage/v1/object/public/images/dark%20theme.jpg';
 
-  // text
+// title
   static String appname = 'Ibu ux';
   static String home = 'Home';
   static String about = 'About us';
@@ -25,6 +25,8 @@ class StaticData {
   static String offering = "What We're Good At";
   static String projects = "Our Latest Project's";
   static String checkout = 'Check Out Our Contents';
+
+// descriptions
   static String hertxt =
       'Relate to our creative works that are beyond your expectations';
   static String herosub =
