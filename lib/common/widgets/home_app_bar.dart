@@ -12,7 +12,7 @@ class HomeAppBar extends StatefulWidget {
 }
 
 class _HomeAppBarState extends State<HomeAppBar> {
-  List<bool> isHover = [false, false];
+  List<bool> isHover = [false, false, false];
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                       children: [
                         txt.textWidget(
                             StaticData.home, 12.0, FontWeight.w400, iwhite),
-                        StaticData.gap1,
+                        StaticData.gap2,
                         Visibility(
                           maintainAnimation: true,
                           maintainState: true,
@@ -70,12 +70,37 @@ class _HomeAppBarState extends State<HomeAppBar> {
                       children: [
                         txt.textWidget(
                             StaticData.about, 12.0, FontWeight.w400, iwhite),
-                        StaticData.gap1,
+                        StaticData.gap2,
                         Visibility(
                           maintainAnimation: true,
                           maintainState: true,
                           maintainSize: true,
                           visible: isHover[1],
+                          child: Container(height: 2, width: 25, color: iwhite),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Gap(scrnsize.width / 20),
+                  InkWell(
+                    onTap: () {},
+                    onHover: (value) {
+                      setState(() {
+                        isHover[2] = value;
+                      });
+                    },
+                    hoverColor: Colors.transparent,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        txt.textWidget(
+                            StaticData.service, 12.0, FontWeight.w400, iwhite),
+                        StaticData.gap2,
+                        Visibility(
+                          maintainAnimation: true,
+                          maintainState: true,
+                          maintainSize: true,
+                          visible: isHover[2],
                           child: Container(height: 2, width: 25, color: iwhite),
                         ),
                       ],
