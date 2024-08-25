@@ -24,6 +24,7 @@ class StaticData {
   static String service = 'Our services';
   static String offering = "What We're Good At";
   static String projects = "Our Latest Project's";
+  static String checkout = 'Check Out Our Contents';
   static String hertxt =
       'Relate to our creative works that are beyond your expectations';
   static String herosub =
