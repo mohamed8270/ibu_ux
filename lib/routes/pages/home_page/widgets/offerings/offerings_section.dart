@@ -5,14 +5,24 @@ import 'package:ibu_ux/common/styles/static.dart';
 import 'package:ibu_ux/common/styles/theme.dart';
 import 'package:ibu_ux/common/widgets/rusable_widgets.dart';
 
-class OfferingsSection extends StatelessWidget {
+class OfferingsSection extends StatefulWidget {
   const OfferingsSection({super.key});
 
   @override
+  State<OfferingsSection> createState() => _OfferingsSectionState();
+}
+
+class _OfferingsSectionState extends State<OfferingsSection> {
+  // widgets
+  var txt = TextFond();
+  var use = ReusableWidgets();
+
+  // hover effect
+  List<bool> isHover = [false, false, false, false];
+
+  @override
   Widget build(BuildContext context) {
-    var txt = TextFond();
     var scrnsize = MediaQuery.sizeOf(context);
-    var use = ReusableWidgets();
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 60),
       child: Column(
@@ -25,6 +35,13 @@ class OfferingsSection extends StatelessWidget {
             snum: '01',
             title: 'UI & UX design',
             content: StaticData.offerC1,
+            txtcolor: isHover[0] ? iviolet : iblack,
+            tap: () {},
+            hover: (p0) {
+              setState(() {
+                isHover[0] = p0;
+              });
+            },
             widget: RotationTransition(
               turns: const AlwaysStoppedAnimation(5 / 360),
               child: Container(
@@ -47,6 +64,9 @@ class OfferingsSection extends StatelessWidget {
             snum: '02',
             title: 'App Development',
             content: StaticData.offerC2,
+            txtcolor: iblack,
+            tap: () {},
+            hover: (p0) {},
             widget: use.svgIcon(StaticData.arrowGo, 20.0, 20.0, iblack),
           ),
           use.dividerLine(scrnsize.width),
@@ -54,6 +74,9 @@ class OfferingsSection extends StatelessWidget {
             snum: '03',
             title: 'Web Development',
             content: StaticData.offerC2,
+            txtcolor: iblack,
+            tap: () {},
+            hover: (p0) {},
             widget: use.svgIcon(StaticData.arrowGo, 20.0, 20.0, iblack),
           ),
           use.dividerLine(scrnsize.width),
@@ -61,6 +84,9 @@ class OfferingsSection extends StatelessWidget {
             snum: '04',
             title: 'Digital Marketing',
             content: StaticData.offerC2,
+            txtcolor: iblack,
+            tap: () {},
+            hover: (p0) {},
             widget: use.svgIcon(StaticData.arrowGo, 20.0, 20.0, iblack),
           ),
         ],
@@ -70,17 +96,24 @@ class OfferingsSection extends StatelessWidget {
 }
 
 class OfferingContent extends StatelessWidget {
-  const OfferingContent(
-      {super.key,
-      required this.snum,
-      required this.title,
-      required this.content,
-      required this.widget});
+  const OfferingContent({
+    super.key,
+    required this.snum,
+    required this.title,
+    required this.content,
+    required this.widget,
+    required this.hover,
+    required this.tap,
+    required this.txtcolor,
+  });
 
   final String snum;
   final String title;
   final String content;
   final Widget widget;
+  final Color txtcolor;
+  final Function(bool) hover;
+  final VoidCallback tap;
 
   @override
   Widget build(BuildContext context) {
@@ -89,16 +122,17 @@ class OfferingContent extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20),
       child: InkWell(
-        onTap: () {},
-        onHover: (value) {},
+        onTap: tap,
+        onHover: hover,
+        hoverColor: Colors.transparent,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            txt.textWidget(snum, 20.0, FontWeight.w500, iblack),
+            txt.textWidget(snum, 20.0, FontWeight.w500, txtcolor),
             Gap(scrnsize.width / 10),
             SizedBox(
               width: scrnsize.width * 0.2,
-              child: txt.textWidget(title, 20.0, FontWeight.w500, iblack),
+              child: txt.textWidget(title, 20.0, FontWeight.w500, txtcolor),
             ),
             Gap(scrnsize.width / 10),
             SizedBox(
