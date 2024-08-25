@@ -5,7 +5,8 @@ import 'package:ibu_ux/common/styles/static.dart';
 import 'package:ibu_ux/common/styles/theme.dart';
 
 class HomeAppBar extends StatefulWidget {
-  const HomeAppBar({super.key});
+  final Color color;
+  const HomeAppBar({super.key, required this.color});
 
   @override
   State<HomeAppBar> createState() => _HomeAppBarState();
@@ -19,7 +20,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
     var scrnsize = MediaQuery.sizeOf(context);
     var txt = TextFond();
     return Container(
-      decoration: const BoxDecoration(color: Colors.transparent),
+      decoration: BoxDecoration(color: widget.color),
       alignment: Alignment.center,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 60),

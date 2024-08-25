@@ -7,8 +7,36 @@ import 'package:ibu_ux/routes/pages/home_page/widgets/hero_section/hero_section.
 import 'package:ibu_ux/routes/pages/home_page/widgets/offerings/offerings_section.dart';
 import 'package:ibu_ux/routes/pages/home_page/widgets/projects/latest_projects.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  ScrollController scrollController = ScrollController();
+  Color color = Colors.transparent;
+
+  @override
+  void initState() {
+    super.initState();
+    scrollController.addListener(() {
+      setState(() {
+        if (scrollController.offset > 100) {
+          color = iblack;
+        } else {
+          color = Colors.transparent;
+        }
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    scrollController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +46,12 @@ class HomePage extends StatelessWidget {
       backgroundColor: iwhite,
       appBar: PreferredSize(
         preferredSize: Size(scrnsize.width, 80),
-        child: const HomeAppBar(),
+        child: HomeAppBar(color: color),
       ),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
+        controller: scrollController,
         scrollDirection: Axis.vertical,
-        child: Column(
+        child: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             HeroSection(),
