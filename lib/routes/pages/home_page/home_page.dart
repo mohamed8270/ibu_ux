@@ -18,6 +18,11 @@ class _HomePageState extends State<HomePage> {
   ScrollController scrollController = ScrollController();
   Color color = Colors.transparent;
 
+  void scrollToTap(double offset) {
+    scrollController.animateTo(offset,
+        duration: const Duration(seconds: 1), curve: Curves.easeInOut);
+  }
+
   @override
   void initState() {
     super.initState();
@@ -46,7 +51,13 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: iwhite,
       appBar: PreferredSize(
         preferredSize: Size(scrnsize.width, 80),
-        child: HomeAppBar(color: color),
+        child: HomeAppBar(
+          color: color,
+          homeTap: () {},
+          aboutTap: () => scrollToTap(500),
+          serviceTap: () => scrollToTap(700),
+          contentTap: () => scrollToTap(2100),
+        ),
       ),
       body: SingleChildScrollView(
         controller: scrollController,

@@ -6,14 +6,24 @@ import 'package:ibu_ux/common/styles/theme.dart';
 
 class HomeAppBar extends StatefulWidget {
   final Color color;
-  const HomeAppBar({super.key, required this.color});
+  final VoidCallback homeTap;
+  final VoidCallback aboutTap;
+  final VoidCallback serviceTap;
+  final VoidCallback contentTap;
+  const HomeAppBar(
+      {super.key,
+      required this.color,
+      required this.aboutTap,
+      required this.serviceTap,
+      required this.homeTap,
+      required this.contentTap});
 
   @override
   State<HomeAppBar> createState() => _HomeAppBarState();
 }
 
 class _HomeAppBarState extends State<HomeAppBar> {
-  List<bool> isHover = [false, false, false];
+  List<bool> isHover = [false, false, false, false];
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +44,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: widget.homeTap,
                     onHover: (value) {
                       setState(() {
                         isHover[0] = value;
@@ -59,7 +69,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                   ),
                   Gap(scrnsize.width / 20),
                   InkWell(
-                    onTap: () {},
+                    onTap: widget.aboutTap,
                     onHover: (value) {
                       setState(() {
                         isHover[1] = value;
@@ -84,7 +94,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                   ),
                   Gap(scrnsize.width / 20),
                   InkWell(
-                    onTap: () {},
+                    onTap: widget.serviceTap,
                     onHover: (value) {
                       setState(() {
                         isHover[2] = value;
@@ -102,6 +112,31 @@ class _HomeAppBarState extends State<HomeAppBar> {
                           maintainState: true,
                           maintainSize: true,
                           visible: isHover[2],
+                          child: Container(height: 2, width: 25, color: iwhite),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Gap(scrnsize.width / 20),
+                  InkWell(
+                    onTap: widget.contentTap,
+                    onHover: (value) {
+                      setState(() {
+                        isHover[3] = value;
+                      });
+                    },
+                    hoverColor: Colors.transparent,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        txt.textWidget(
+                            StaticData.content, 12.0, FontWeight.w400, iwhite),
+                        StaticData.gap2,
+                        Visibility(
+                          maintainAnimation: true,
+                          maintainState: true,
+                          maintainSize: true,
+                          visible: isHover[3],
                           child: Container(height: 2, width: 25, color: iwhite),
                         ),
                       ],

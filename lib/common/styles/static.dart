@@ -21,6 +21,7 @@ class StaticData {
   static String appname = 'Ibu ux';
   static String home = 'Home';
   static String about = 'About us';
+  static String content = 'Contents';
   static String service = 'Our services';
   static String offering = "What We're Good At";
   static String projects = "Our Latest Project's";
