@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:ibu_ux/common/styles/fonts.dart';
 import 'package:ibu_ux/common/styles/static.dart';
 import 'package:ibu_ux/common/styles/theme.dart';
@@ -29,7 +30,7 @@ class HeroSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             txt.textWidget(StaticData.hertxt, 60.0, FontWeight.w400, iwhite),
-            StaticData.gap3,
+            Gap(scrnsize.height * 0.06),
             txt.textWidget(StaticData.herosub, 14.0, FontWeight.w300, iwhite),
           ],
         ),
