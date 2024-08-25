@@ -31,9 +31,13 @@ class StaticData {
   static String aboutcontent =
       'Developer with solid design and development expertise, We build websites, Mobile applications, and elaborate online business services';
   static String offerC1 =
-      'User-Centric Approach: we beleive that design should revolve aound the needs and designs of your users';
+      'User-Centric Approach: we beleive that design should revolve around the needs and desiress of your users';
   static String offerC2 =
-      'Build with Architecture: Get your application done with architecture to provide a best foundation';
+      'Cutting-Edge Technology: We stay at the forefront of latest technology, Constantly exploring new tools and techniques';
+  static String offerC3 =
+      'Customized Solutions: We believe in the power of tailored solutions. Our development services are designed to meet your specific';
+  static String offerC4 =
+      'Creative Storytelling: We believe in the power of storytelling. Our team excels at crafting narratives that resonate with your audience';
 
 // space
   static const Gap gap1 = Gap(5);

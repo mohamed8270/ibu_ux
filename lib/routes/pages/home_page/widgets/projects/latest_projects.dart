@@ -75,7 +75,7 @@ class GridCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: igrey,
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: BorderRadius.circular(2),
         image: DecorationImage(
           image: NetworkImage(url),
           fit: BoxFit.cover,

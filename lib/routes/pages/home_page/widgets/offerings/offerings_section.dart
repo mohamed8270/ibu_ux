@@ -77,7 +77,7 @@ class _OfferingsSectionState extends State<OfferingsSection> {
           OfferingContent(
             snum: '03',
             title: 'Web Development',
-            content: StaticData.offerC2,
+            content: StaticData.offerC3,
             txtcolor: isHover[2] ? iviolet : iblack,
             tap: () {},
             hover: (p0) {
@@ -91,7 +91,7 @@ class _OfferingsSectionState extends State<OfferingsSection> {
           OfferingContent(
             snum: '04',
             title: 'Digital Marketing',
-            content: StaticData.offerC2,
+            content: StaticData.offerC4,
             txtcolor: isHover[3] ? iviolet : iblack,
             tap: () {},
             hover: (p0) {
