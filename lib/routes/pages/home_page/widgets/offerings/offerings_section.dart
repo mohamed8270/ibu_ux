@@ -49,7 +49,7 @@ class _OfferingsSectionState extends State<OfferingsSection> {
                 width: scrnsize.width * 0.1,
                 decoration: BoxDecoration(
                   color: iviolet,
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                   image: DecorationImage(
                     image: NetworkImage(StaticData.notesapp),
                     fit: BoxFit.cover,
@@ -101,6 +101,7 @@ class _OfferingsSectionState extends State<OfferingsSection> {
             },
             widget: use.svgIcon(StaticData.arrowGo, 20.0, 20.0, iblack),
           ),
+          use.dividerLine(scrnsize.width),
         ],
       ),
     );

@@ -23,7 +23,7 @@ class StaticData {
   static String about = 'About us';
   static String service = 'Our services';
   static String offering = "What We're Good At";
-  static String projects = "Our latest project's";
+  static String projects = "Our Latest Project's";
   static String hertxt =
       'Relate to our creative works that are beyond your expectations';
   static String herosub =
