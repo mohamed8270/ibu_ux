@@ -29,7 +29,7 @@ class CheckOutSection extends StatelessWidget {
             width: scrnsize.width,
             child: ListView.builder(
               shrinkWrap: true,
-              physics: const ClampingScrollPhysics(),
+              physics: const ScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemCount: data.porjectsData.length,
               itemBuilder: (context, i) {
