@@ -74,7 +74,7 @@ class GridCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: iviolet,
+        color: Colors.transparent,
         borderRadius: BorderRadius.circular(2),
         image: DecorationImage(
           image: NetworkImage(url),
