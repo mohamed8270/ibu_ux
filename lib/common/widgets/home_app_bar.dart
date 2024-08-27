@@ -38,6 +38,9 @@ class _HomeAppBarState extends State<HomeAppBar> {
             horizontal: ResponsiveWidget.isLarge(context) ? 60 : 20),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: ResponsiveWidget.isLarge(context)
+              ? MainAxisAlignment.center
+              : MainAxisAlignment.spaceBetween,
           children: [
             txt.textWidget(
                 StaticData.appname,
