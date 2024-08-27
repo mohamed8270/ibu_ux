@@ -37,7 +37,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            txt.textWidget(StaticData.appname, 16.0, FontWeight.w600, iwhite),
+            txt.textWidget(StaticData.appname, 16.0, FontWeight.w600, iblack),
             Expanded(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -55,14 +55,14 @@ class _HomeAppBarState extends State<HomeAppBar> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         txt.textWidget(
-                            StaticData.home, 12.0, FontWeight.w400, iwhite),
+                            StaticData.home, 12.0, FontWeight.w400, iblack),
                         StaticData.gap2,
                         Visibility(
                           maintainAnimation: true,
                           maintainState: true,
                           maintainSize: true,
                           visible: isHover[0],
-                          child: Container(height: 2, width: 25, color: iwhite),
+                          child: Container(height: 2, width: 25, color: iblack),
                         ),
                       ],
                     ),
@@ -80,14 +80,14 @@ class _HomeAppBarState extends State<HomeAppBar> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         txt.textWidget(
-                            StaticData.about, 12.0, FontWeight.w400, iwhite),
+                            StaticData.about, 12.0, FontWeight.w400, iblack),
                         StaticData.gap2,
                         Visibility(
                           maintainAnimation: true,
                           maintainState: true,
                           maintainSize: true,
                           visible: isHover[1],
-                          child: Container(height: 2, width: 25, color: iwhite),
+                          child: Container(height: 2, width: 25, color: iblack),
                         ),
                       ],
                     ),
@@ -105,14 +105,14 @@ class _HomeAppBarState extends State<HomeAppBar> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         txt.textWidget(
-                            StaticData.service, 12.0, FontWeight.w400, iwhite),
+                            StaticData.service, 12.0, FontWeight.w400, iblack),
                         StaticData.gap2,
                         Visibility(
                           maintainAnimation: true,
                           maintainState: true,
                           maintainSize: true,
                           visible: isHover[2],
-                          child: Container(height: 2, width: 25, color: iwhite),
+                          child: Container(height: 2, width: 25, color: iblack),
                         ),
                       ],
                     ),
@@ -130,14 +130,14 @@ class _HomeAppBarState extends State<HomeAppBar> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         txt.textWidget(
-                            StaticData.content, 12.0, FontWeight.w400, iwhite),
+                            StaticData.content, 12.0, FontWeight.w400, iblack),
                         StaticData.gap2,
                         Visibility(
                           maintainAnimation: true,
                           maintainState: true,
                           maintainSize: true,
                           visible: isHover[3],
-                          child: Container(height: 2, width: 25, color: iwhite),
+                          child: Container(height: 2, width: 25, color: iblack),
                         ),
                       ],
                     ),
@@ -145,15 +145,19 @@ class _HomeAppBarState extends State<HomeAppBar> {
                 ],
               ),
             ),
-            Container(
-              height: scrnsize.height * 0.055,
-              width: scrnsize.width * 0.1,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(40),
-                border: Border.all(width: 1, color: iwhite),
+            InkWell(
+              onTap: () {},
+              onHover: (value) {},
+              child: Container(
+                height: scrnsize.height * 0.055,
+                width: scrnsize.width * 0.1,
+                decoration: BoxDecoration(
+                  color: iblack,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                alignment: Alignment.center,
+                child: txt.textWidget('Contact', 12.0, FontWeight.w400, iwhite),
               ),
-              alignment: Alignment.center,
-              child: txt.textWidget('Contact', 12.0, FontWeight.w400, iwhite),
             ),
           ],
         ),

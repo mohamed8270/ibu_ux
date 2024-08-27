@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ibu_ux/common/styles/theme.dart';
 import 'package:ibu_ux/common/widgets/home_app_bar.dart';
-import 'package:ibu_ux/routes/pages/home_page/widgets/about_us/about_us_section.dart';
-import 'package:ibu_ux/routes/pages/home_page/widgets/check_out/check_out_section.dart';
 import 'package:ibu_ux/routes/pages/home_page/widgets/hero_section/hero_section.dart';
-import 'package:ibu_ux/routes/pages/home_page/widgets/offerings/offerings_section.dart';
-import 'package:ibu_ux/routes/pages/home_page/widgets/projects/latest_projects.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,7 +12,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   ScrollController scrollController = ScrollController();
-  Color color = Colors.transparent;
+  Color color = iwhite;
 
   void scrollToTap(double offset) {
     scrollController.animateTo(offset,
@@ -29,9 +25,9 @@ class _HomePageState extends State<HomePage> {
     scrollController.addListener(() {
       setState(() {
         if (scrollController.offset > 100) {
-          color = iblack;
+          color = iwhite;
         } else {
-          color = Colors.transparent;
+          color = iwhite;
         }
       });
     });
@@ -47,7 +43,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     var scrnsize = MediaQuery.sizeOf(context);
     return Scaffold(
-      extendBodyBehindAppBar: true,
       backgroundColor: iwhite,
       appBar: PreferredSize(
         preferredSize: Size(scrnsize.width, 80),
@@ -66,10 +61,6 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             HeroSection(),
-            AboutUsSection(),
-            OfferingsSection(),
-            LatestProjects(),
-            CheckOutSection(),
           ],
         ),
       ),

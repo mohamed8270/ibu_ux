@@ -27,9 +27,12 @@ class StaticData {
   static String projects = "Our Latest Project's";
   static String checkout = 'Check Out Our Contents';
 
-// descriptions
-  static String hertxt =
-      'Relate to our creative works that are beyond your expectations';
+// hero descriptions
+  static String greeting = "Hello! I'am Mohamed\nIbrahim";
+  static String hertxt = 'A Cross-Platform Developer\nbased in India';
+  static String btntxt1 = 'Talk with me';
+  static String btntxt2 = 'See my work';
+
   static String herosub =
       'Developer with solid design and development expertise';
   static String aboutcontent =
