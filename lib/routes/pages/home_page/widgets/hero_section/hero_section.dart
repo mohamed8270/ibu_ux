@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:ibu_ux/bindings/controller/responsive_widget.dart';
 import 'package:ibu_ux/common/styles/fonts.dart';
 import 'package:ibu_ux/common/styles/static.dart';
 import 'package:ibu_ux/common/styles/theme.dart';
@@ -17,8 +18,12 @@ class HeroSection extends StatelessWidget {
       decoration: const BoxDecoration(color: iwhite),
       alignment: Alignment.center,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 60),
-        child: Row(
+        padding: EdgeInsets.symmetric(
+            horizontal: ResponsiveWidget.isLarge(context) ? 60 : 20),
+        child: Flex(
+          direction: ResponsiveWidget.isLarge(context)
+              ? Axis.horizontal
+              : Axis.vertical,
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,7 +41,10 @@ class HeroSection extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 txt.textWidget(
-                    StaticData.hertxt, 40.0, FontWeight.w400, iblack),
+                    StaticData.hertxt,
+                    ResponsiveWidget.isLarge(context) ? 40.0 : 22.0,
+                    FontWeight.w400,
+                    iblack),
                 StaticData.gap2,
                 txt.textWidget(StaticData.herosub, 14.0, FontWeight.w400,
                     iblack.withOpacity(0.6)),
@@ -48,6 +56,7 @@ class HeroSection extends StatelessWidget {
                       t: StaticData.btntxt1,
                       tc: iwhite,
                       bc: iblack,
+                      w: ResponsiveWidget.isLarge(context) ? 0.1 : 0.4,
                       click: () {},
                       hover: (h) {},
                     ),
@@ -56,6 +65,7 @@ class HeroSection extends StatelessWidget {
                       t: StaticData.btntxt2,
                       tc: iblack,
                       bc: Colors.transparent,
+                      w: ResponsiveWidget.isLarge(context) ? 0.1 : 0.4,
                       border: Border.all(width: 1.5, color: igrey),
                       click: () {},
                       hover: (h) {},
@@ -79,11 +89,13 @@ class ButtonBox extends StatelessWidget {
       required this.bc,
       this.border,
       required this.click,
-      required this.hover});
+      required this.hover,
+      required this.w});
 
   final String t;
   final Color tc;
   final Color bc;
+  final double w;
   final BoxBorder? border;
   final VoidCallback click;
   final Function(bool) hover;
@@ -97,7 +109,7 @@ class ButtonBox extends StatelessWidget {
       onHover: hover,
       child: Container(
         height: scrnsize.height * 0.055,
-        width: scrnsize.width * 0.1,
+        width: scrnsize.width * w,
         decoration: BoxDecoration(
           color: bc,
           borderRadius: BorderRadius.circular(10),
