@@ -33,6 +33,47 @@ class StaticData {
   static String btntxt1 = 'Talk with me';
   static String btntxt2 = 'See my work';
 
+// experience
+  static String heading1 = 'Work Experience';
+  static String role1 = 'Cross-Platform Developer at ';
+  static String com1 = 'Accent Techno Soft';
+  static String date1 = '2023 to present';
+  static String img1 =
+      'https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/xa0ianngv7nlg8jkykfg';
+
+  static String role2 = 'Web Developer at ';
+  static String com2 = 'Spacescan.io';
+  static String date2 = '2022 to 2023';
+  static String img2 =
+      'https://pbs.twimg.com/profile_images/1440859481072705538/LgTYpsln_400x400.jpg';
+
+  static String role3 = 'Content creator and YouTuber at ';
+  static String com3 = 'YouTube';
+  static String date3 = '2021 to current';
+  static String img3 =
+      'https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png';
+
+// awards
+  static String heading2 = 'Awards & Recognition ';
+  static String awa1 = 'Smart India Hackathon 2022';
+  static String pro1 = 'India';
+  static String date4 = '2022';
+  static String img4 =
+      'https://i0.wp.com/opportunitycell.com/wp-content/uploads/2022/03/SIH2.png?fit=327%2C345&ssl=1';
+
+  static String awa2 = 'Abdul Kalam Young Achiever Award ';
+  static String pro2 = 'Youth Federation';
+  static String date5 = '2023';
+  static String img5 =
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEtF_xPNr_ill6qY_GHU3rIt0CKtqDTF9UZw&s';
+
+  static String awa3 = 'Entrepreneurship & Innovation ';
+  static String pro3 = 'Business';
+  static String date6 = '2021';
+  static String img6 =
+      'https://www.kindpng.com/picc/m/300-3002120_transparent-entrepreneurship-png-png-download.png';
+
+// descriptions
   static String herosub =
       'Developer with solid design and development expertise';
   static String aboutcontent =
