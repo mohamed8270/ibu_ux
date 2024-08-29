@@ -29,7 +29,11 @@ class HeroSection extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const CircleAvatar(radius: 25, backgroundColor: iblack),
+                CircleAvatar(
+                  radius: 25,
+                  backgroundColor: iblack,
+                  backgroundImage: NetworkImage(StaticData.blazer),
+                ),
                 StaticData.gap3,
                 txt.textWidget(
                     StaticData.greeting, 56.0, FontWeight.w400, iblack)

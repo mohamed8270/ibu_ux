@@ -13,9 +13,8 @@ class StaticData {
   static String arrowGo = 'assets/icons/arrow-right-circle.svg';
 
 // images
-  static String heroimg2 = 'https://images3.alphacoders.com/830/83067.jpg';
-  static String notesapp =
-      'https://ewppkbcteahivyqotzoa.supabase.co/storage/v1/object/public/images/dark%20theme.jpg';
+  static String blazer =
+      'https://ewppkbcteahivyqotzoa.supabase.co/storage/v1/object/public/images/blazer.jpg?t=2024-08-29T10%3A49%3A46.686Z';
 
 // title
   static String appname = 'Ibu ux';
@@ -47,7 +46,7 @@ class StaticData {
   static String img2 =
       'https://pbs.twimg.com/profile_images/1440859481072705538/LgTYpsln_400x400.jpg';
 
-  static String role3 = 'Content creator and YouTuber at ';
+  static String role3 = 'Content creator at ';
   static String com3 = 'YouTube';
   static String date3 = 'Aug 2019 to current';
   static String img3 =
@@ -55,7 +54,7 @@ class StaticData {
 
 // awards
   static String heading2 = 'Awards & Recognition';
-  static String awa1 = 'Smart India Hackathon 2022 ';
+  static String awa1 = 'Grand finalist, Smart India Hackathon 2022 ';
   static String pro1 = 'India';
   static String date4 = 'Sept 2022';
   static String img4 =
@@ -68,7 +67,7 @@ class StaticData {
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEtF_xPNr_ill6qY_GHU3rIt0CKtqDTF9UZw&s';
 
   static String awa3 = 'Entrepreneurship & Innovation ';
-  static String pro3 = 'Business';
+  static String pro3 = 'Microsoft';
   static String date6 = 'Jun 2021';
   static String img6 =
       'https://www.kindpng.com/picc/m/300-3002120_transparent-entrepreneurship-png-png-download.png';

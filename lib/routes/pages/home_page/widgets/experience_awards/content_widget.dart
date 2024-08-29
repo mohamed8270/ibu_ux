@@ -37,7 +37,7 @@ class ReusableContent extends StatelessWidget {
             borderRadius: BorderRadius.circular(7),
             image: DecorationImage(
               image: NetworkImage(img),
-              fit: BoxFit.contain,
+              fit: BoxFit.scaleDown,
               filterQuality: FilterQuality.high,
             ),
           ),
@@ -46,18 +46,24 @@ class ReusableContent extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            RichText(
-              text: TextSpan(
-                children: [
-                  TextSpan(
-                    text: title,
-                    style: txt.textStyle(13.0, FontWeight.w500, iblack),
-                  ),
-                  TextSpan(
-                    text: title2,
-                    style: txt.textStyle(13.0, FontWeight.w700, iblack),
-                  ),
-                ],
+            SizedBox(
+              width: ResponsiveWidget.isSmall(context)
+                  ? scrnsize.width * 0.7
+                  : null,
+              child: RichText(
+                overflow: TextOverflow.visible,
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: title,
+                      style: txt.textStyle(13.0, FontWeight.w500, iblack),
+                    ),
+                    TextSpan(
+                      text: title2,
+                      style: txt.textStyle(13.0, FontWeight.w700, iblack),
+                    ),
+                  ],
+                ),
               ),
             ),
             StaticData.gap1,
@@ -76,7 +82,9 @@ class DividerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     var scrnsize = MediaQuery.sizeOf(context);
     return SizedBox(
-      width: scrnsize.width * 0.3,
+      width: ResponsiveWidget.isLarge(context)
+          ? scrnsize.width * 0.3
+          : scrnsize.width,
       child: const Divider(
         thickness: 1,
         height: 1,
