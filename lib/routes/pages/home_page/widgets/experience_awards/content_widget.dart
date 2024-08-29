@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ibu_ux/bindings/controller/responsive_widget.dart';
 import 'package:ibu_ux/common/styles/fonts.dart';
 import 'package:ibu_ux/common/styles/static.dart';
 import 'package:ibu_ux/common/styles/theme.dart';
@@ -21,12 +22,16 @@ class ReusableContent extends StatelessWidget {
   Widget build(BuildContext context) {
     var scrnsize = MediaQuery.sizeOf(context);
     var txt = TextFond();
+    double sizeForContainer() {
+      return ResponsiveWidget.isLarge(context) ? 0.03 : 0.15;
+    }
+
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
           height: scrnsize.height * 0.065,
-          width: scrnsize.width * 0.03,
+          width: scrnsize.width * sizeForContainer(),
           decoration: BoxDecoration(
             color: iwhite,
             borderRadius: BorderRadius.circular(7),
