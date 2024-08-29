@@ -9,7 +9,7 @@ class ExperienceAwards extends StatelessWidget {
   Widget build(BuildContext context) {
     var scrnsize = MediaQuery.sizeOf(context);
     return Container(
-      height: scrnsize.height * 0.5,
+      height: scrnsize.height * 0.6,
       width: scrnsize.width,
       decoration: const BoxDecoration(color: iyellow),
       child: const Padding(
@@ -19,7 +19,7 @@ class ExperienceAwards extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             ReusableWidget(),
-            ReusableWidget(),
+            ReusableWidget2(),
           ],
         ),
       ),
