@@ -45,4 +45,48 @@ class LocalDataRepository extends GetxController {
           "Artificial intelligence is merely used in every sector. In this era to help humans to achieve their needs and this app keep track of their daily basis",
     },
   ];
+
+// tech stack images
+  List<Map<String, String>> techData = [
+    {
+      'name': 'Flutter',
+      'img': '',
+      'alt': 'Flutter',
+    },
+    {
+      'name': 'React js',
+      'img': '',
+      'alt': 'React js',
+    },
+    {
+      'name': 'Next js',
+      'img': '',
+      'alt': 'Next js',
+    },
+    {
+      'name': 'MERN',
+      'img': '',
+      'alt': 'MERN',
+    },
+    {
+      'name': 'MongoDB',
+      'img': '',
+      'alt': 'MongoDB',
+    },
+    {
+      'name': 'Node js',
+      'img': '',
+      'alt': 'Node js',
+    },
+    {
+      'name': 'Firebase',
+      'img': '',
+      'alt': 'Firebase',
+    },
+    {
+      'name': 'Supabase',
+      'img': '',
+      'alt': 'Supabase',
+    },
+  ];
 }
