@@ -42,6 +42,7 @@ class WorksSection extends StatelessWidget {
               child: ListView.builder(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
+                physics: const ClampingScrollPhysics(),
                 itemCount: prodata.porjectsData.length,
                 itemBuilder: (context, i) {
                   final data = prodata.porjectsData[i];
