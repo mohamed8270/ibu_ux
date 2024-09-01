@@ -24,6 +24,10 @@ class HeroSection extends StatelessWidget {
           direction: ResponsiveWidget.isLarge(context)
               ? Axis.horizontal
               : Axis.vertical,
+          mainAxisAlignment: ResponsiveWidget.isLarge(context)
+              ? MainAxisAlignment.spaceBetween
+              : MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,12 +35,12 @@ class HeroSection extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 25,
-                  backgroundColor: iwhite,
+                  backgroundColor: igrey,
                   backgroundImage: NetworkImage(StaticData.blazer),
                 ),
                 StaticData.gap3,
                 txt.textWidget(
-                    StaticData.greeting, 56.0, FontWeight.w400, iblack)
+                    StaticData.greeting, 56.0, FontWeight.w400, iblack),
               ],
             ),
             Gap(scrnsize.width * 0.1),
