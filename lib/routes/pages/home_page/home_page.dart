@@ -54,8 +54,8 @@ class _HomePageState extends State<HomePage> {
           color: color,
           homeTap: () => scrollToTap(0),
           aboutTap: () => scrollToTap(500),
-          serviceTap: () => scrollToTap(700),
-          contentTap: () => scrollToTap(2200),
+          serviceTap: () => scrollToTap(960),
+          contentTap: () => scrollToTap(1350),
         ),
       ),
       body: SingleChildScrollView(

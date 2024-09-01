@@ -93,7 +93,7 @@ class WorksContent extends StatelessWidget {
                 ? (scrnsize.width * 0.25)
                 : (scrnsize.width * 0.65),
             decoration: BoxDecoration(
-              color: igrey,
+              color: igrey.withOpacity(0.6),
               image: DecorationImage(
                 image: NetworkImage(imgurl),
                 fit: BoxFit.cover,

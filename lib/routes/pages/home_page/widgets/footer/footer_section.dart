@@ -76,7 +76,7 @@ class FooterSection extends StatelessWidget {
                 ),
               ],
             ),
-            Gap(ResponsiveWidget.isLarge(context) ? 160 : 30),
+            Gap(ResponsiveWidget.isLarge(context) ? 160 : 80),
             RichText(
               text: TextSpan(
                 children: [
