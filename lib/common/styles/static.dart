@@ -4,13 +4,11 @@ class StaticData {
 // icons
   static String leftarrow = 'assets/icons/left-arrow.svg';
   static String rightarrow = 'assets/icons/right-arrow.svg';
-  static String uparrow = 'assets/icons/up-arrow.svg';
   static String instagram = 'assets/icons/instagram.svg';
   static String youtube = 'assets/icons/youtube.svg';
   static String linkedin = 'assets/icons/linkedin.svg';
-  static String dribble = 'assets/icons/dribble.svg';
+  static String dribble = 'assets/icons/dribbble.svg';
   static String github = 'assets/icons/github.svg';
-  static String arrowGo = 'assets/icons/arrow-right-circle.svg';
 
 // images
   static String blazer =

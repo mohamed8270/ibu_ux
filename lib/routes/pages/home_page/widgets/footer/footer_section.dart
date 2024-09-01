@@ -49,34 +49,41 @@ class FooterSection extends StatelessWidget {
               hover: (h0) {},
               w: ResponsiveWidget.isLarge(context) ? 0.1 : 0.4,
             ),
-            StaticData.gap3,
+            const Gap(35),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SocialIcons(
+                  size: 24,
                   path: StaticData.dribble,
                   click: () {},
                   hover: (h0) {},
                 ),
+                StaticData.gap3,
                 SocialIcons(
+                  size: 24,
                   path: StaticData.instagram,
                   click: () {},
                   hover: (h0) {},
                 ),
+                StaticData.gap3,
                 SocialIcons(
+                  size: 28,
                   path: StaticData.youtube,
                   click: () {},
                   hover: (h0) {},
                 ),
+                StaticData.gap3,
                 SocialIcons(
+                  size: 27,
                   path: StaticData.github,
                   click: () {},
                   hover: (h0) {},
                 ),
               ],
             ),
-            Gap(ResponsiveWidget.isLarge(context) ? 160 : 80),
+            Gap(ResponsiveWidget.isLarge(context) ? 130 : 80),
             RichText(
               text: TextSpan(
                 children: [
@@ -103,9 +110,11 @@ class SocialIcons extends StatelessWidget {
       {super.key,
       required this.path,
       required this.click,
-      required this.hover});
+      required this.hover,
+      required this.size});
 
   final String path;
+  final double size;
   final VoidCallback click;
   final Function(bool) hover;
 
@@ -116,8 +125,8 @@ class SocialIcons extends StatelessWidget {
       onHover: hover,
       child: SvgPicture.asset(
         path,
-        height: 20,
-        width: 20,
+        height: size,
+        width: size,
         colorFilter: const ColorFilter.mode(iblack, BlendMode.srcIn),
       ),
     );
