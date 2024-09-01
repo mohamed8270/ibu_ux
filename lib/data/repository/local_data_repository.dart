@@ -50,42 +50,48 @@ class LocalDataRepository extends GetxController {
   List<Map<String, String>> techData = [
     {
       'name': 'Flutter',
-      'img': '',
+      'img': 'https://iconape.com/wp-content/png_logo_vector/flutter-logo.png',
       'alt': 'Flutter',
     },
     {
       'name': 'React js',
-      'img': '',
+      'img':
+          'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png',
       'alt': 'React js',
     },
     {
       'name': 'Next js',
-      'img': '',
+      'img':
+          'https://cdn.freelogovectors.net/wp-content/uploads/2023/09/next-js-logo-freelogovectors.net_.png',
       'alt': 'Next js',
     },
     {
       'name': 'MERN',
-      'img': '',
+      'img':
+          'https://upload.wikimedia.org/wikipedia/commons/9/94/MERN-logo.png',
       'alt': 'MERN',
     },
     {
       'name': 'MongoDB',
-      'img': '',
+      'img':
+          'https://seeklogo.com/images/M/mongodb-logo-3659963037-seeklogo.com.png',
       'alt': 'MongoDB',
     },
     {
       'name': 'Node js',
-      'img': '',
+      'img':
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Node.js_logo_2015.svg/2560px-Node.js_logo_2015.svg.png',
       'alt': 'Node js',
     },
     {
       'name': 'Firebase',
-      'img': '',
+      'img':
+          'https://1000logos.net/wp-content/uploads/2024/05/Firebase-Logo.png',
       'alt': 'Firebase',
     },
     {
       'name': 'Supabase',
-      'img': '',
+      'img': 'https://lsvp.com/wp-content/uploads/2023/03/Supabase.png',
       'alt': 'Supabase',
     },
   ];
