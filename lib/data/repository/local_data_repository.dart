@@ -50,13 +50,14 @@ class LocalDataRepository extends GetxController {
   List<Map<String, String>> techData = [
     {
       'name': 'Flutter',
-      'img': 'https://iconape.com/wp-content/png_logo_vector/flutter-logo.png',
+      'img':
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Google-flutter-logo.svg/2560px-Google-flutter-logo.svg.png',
       'alt': 'Flutter',
     },
     {
       'name': 'React js',
       'img':
-          'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png',
+          'https://cdn.icon-icons.com/icons2/2699/PNG/512/reactjs_logo_icon_170805.png',
       'alt': 'React js',
     },
     {
@@ -79,8 +80,7 @@ class LocalDataRepository extends GetxController {
     },
     {
       'name': 'Node js',
-      'img':
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Node.js_logo_2015.svg/2560px-Node.js_logo_2015.svg.png',
+      'img': 'https://img.icons8.com/?size=512&id=54087&format=png',
       'alt': 'Node js',
     },
     {

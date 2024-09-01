@@ -102,12 +102,12 @@ class GridTechShow extends StatelessWidget {
             crossAxisCount: ResponsiveWidget.isLarge(context) ? 4 : 3,
             mainAxisSpacing: 30,
             crossAxisSpacing: 20,
-            childAspectRatio: scrnsize.width / (scrnsize.height / 1.0)),
+            childAspectRatio: 2),
         itemBuilder: (context, i) {
           final data = techdata.techData[i];
           return Container(
             decoration: BoxDecoration(
-              color: iwhite,
+              color: Colors.transparent,
               image: DecorationImage(
                 image: NetworkImage(data['img'].toString()),
                 fit: BoxFit.scaleDown,
