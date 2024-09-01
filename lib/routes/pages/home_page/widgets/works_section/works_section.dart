@@ -16,7 +16,9 @@ class WorksSection extends StatelessWidget {
     var txt = TextFond();
     var prodata = Get.put(LocalDataRepository());
     return Container(
-      height: scrnsize.height * 0.65,
+      height: ResponsiveWidget.isLarge(context)
+          ? (scrnsize.height * 0.65)
+          : (scrnsize.height * 0.45),
       width: scrnsize.width,
       decoration: const BoxDecoration(color: iyellow),
       child: Padding(
@@ -33,7 +35,9 @@ class WorksSection extends StatelessWidget {
             ),
             const Gap(40),
             SizedBox(
-              height: scrnsize.height * 0.4,
+              height: ResponsiveWidget.isLarge(context)
+                  ? (scrnsize.height * 0.4)
+                  : (scrnsize.height * 0.26),
               width: scrnsize.width,
               child: ListView.builder(
                 shrinkWrap: true,
@@ -76,8 +80,7 @@ class WorksContent extends StatelessWidget {
     var txt = TextFond();
     return Padding(
       padding: EdgeInsets.only(
-          left: ResponsiveWidget.isLarge(context) ? (i == 0 ? 60 : 10) : 20,
-          right: 10),
+          left: ResponsiveWidget.isLarge(context) ? (i == 0 ? 60 : 15) : 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -100,6 +103,7 @@ class WorksContent extends StatelessWidget {
           ),
           StaticData.gap2,
           txt.textWidget(t, 14.0, FontWeight.w600, iblack),
+          StaticData.gap1,
           SizedBox(
             width: ResponsiveWidget.isLarge(context)
                 ? (scrnsize.width * 0.25)
