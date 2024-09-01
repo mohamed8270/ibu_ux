@@ -4,6 +4,7 @@ import 'package:ibu_ux/common/widgets/home_app_bar.dart';
 import 'package:ibu_ux/routes/pages/home_page/widgets/experience_awards/experience_awards.dart';
 import 'package:ibu_ux/routes/pages/home_page/widgets/hero_section/hero_section.dart';
 import 'package:ibu_ux/routes/pages/home_page/widgets/tech_section/tech_section.dart';
+import 'package:ibu_ux/routes/pages/home_page/widgets/works_section/works_section.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -65,6 +66,7 @@ class _HomePageState extends State<HomePage> {
             HeroSection(),
             ExperienceAwards(),
             TechSection(),
+            WorksSection(),
           ],
         ),
       ),
