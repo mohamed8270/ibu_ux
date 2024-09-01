@@ -61,13 +61,13 @@ class StaticData {
   static String pro2 = 'Youth Federation';
   static String date5 = 'Oct 2023';
   static String img5 =
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEtF_xPNr_ill6qY_GHU3rIt0CKtqDTF9UZw&s';
+      'https://png.pngtree.com/png-vector/20230213/ourmid/pngtree-best-award-gold-label-png-image_6595408.png';
 
   static String awa3 = 'Entrepreneurship & Innovation ';
   static String pro3 = 'Microsoft';
   static String date6 = 'Jun 2021';
   static String img6 =
-      'https://www.kindpng.com/picc/m/300-3002120_transparent-entrepreneurship-png-png-download.png';
+      'https://cdn-icons-png.flaticon.com/512/10108/10108295.png';
 
 // technology stack
   static String techtitle =

@@ -31,7 +31,7 @@ class HeroSection extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 25,
-                  backgroundColor: iblack,
+                  backgroundColor: iwhite,
                   backgroundImage: NetworkImage(StaticData.blazer),
                 ),
                 StaticData.gap3,
