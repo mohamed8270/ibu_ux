@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
+import 'package:ibu_ux/bindings/controller/responsive_widget.dart';
 import 'package:ibu_ux/common/styles/fonts.dart';
 import 'package:ibu_ux/common/styles/static.dart';
 import 'package:ibu_ux/common/styles/theme.dart';
@@ -19,12 +20,14 @@ class WorksSection extends StatelessWidget {
       width: scrnsize.width,
       decoration: const BoxDecoration(color: iyellow),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 40),
+        padding: EdgeInsets.symmetric(
+            vertical: ResponsiveWidget.isLarge(context) ? 40 : 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 60),
+              padding: EdgeInsets.symmetric(
+                  horizontal: ResponsiveWidget.isLarge(context) ? 60 : 20),
               child:
                   txt.textWidget('Works done', 34.0, FontWeight.w500, iblack),
             ),
@@ -72,13 +75,19 @@ class WorksContent extends StatelessWidget {
     var scrnsize = MediaQuery.sizeOf(context);
     var txt = TextFond();
     return Padding(
-      padding: EdgeInsets.only(left: i == 0 ? 60 : 10, right: 10),
+      padding: EdgeInsets.only(
+          left: ResponsiveWidget.isLarge(context) ? (i == 0 ? 60 : 10) : 20,
+          right: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: scrnsize.height * 0.28,
-            width: scrnsize.width * 0.25,
+            height: ResponsiveWidget.isLarge(context)
+                ? (scrnsize.height * 0.28)
+                : (scrnsize.height * 0.15),
+            width: ResponsiveWidget.isLarge(context)
+                ? (scrnsize.width * 0.25)
+                : (scrnsize.width * 0.65),
             decoration: BoxDecoration(
               color: igrey,
               image: DecorationImage(
@@ -92,7 +101,9 @@ class WorksContent extends StatelessWidget {
           StaticData.gap2,
           txt.textWidget(t, 14.0, FontWeight.w600, iblack),
           SizedBox(
-            width: scrnsize.width * 0.25,
+            width: ResponsiveWidget.isLarge(context)
+                ? (scrnsize.width * 0.25)
+                : (scrnsize.width * 0.65),
             child: txt.textWidget(des, 10.0, FontWeight.w500, iblack,
                 TextOverflow.visible, 1.5, TextAlign.justify),
           )
