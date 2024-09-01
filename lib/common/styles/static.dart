@@ -22,9 +22,6 @@ class StaticData {
   static String about = 'About us';
   static String content = 'Contents';
   static String service = 'Our services';
-  static String offering = "What We're Good At";
-  static String projects = "Our Latest Project's";
-  static String checkout = 'Check Out Our Contents';
 
 // hero descriptions
   static String greeting = "Hello! I'am Mohamed\nIbrahim";
@@ -71,6 +68,12 @@ class StaticData {
   static String date6 = 'Jun 2021';
   static String img6 =
       'https://www.kindpng.com/picc/m/300-3002120_transparent-entrepreneurship-png-png-download.png';
+
+// technology stack
+  static String techtitle =
+      'Experience with a variety of\nprojects and technologies';
+  static String techdes =
+      'Cutting-Edge Technology: We stay at the forefront of latest technology, Constantly exploring new tools and techniques so that we can provide the our clients a better results to thier specific needs';
 
 // descriptions
   static String herosub =

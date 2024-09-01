@@ -67,7 +67,8 @@ class ReusableContent extends StatelessWidget {
               ),
             ),
             StaticData.gap1,
-            txt.textWidget(date, 11.0, FontWeight.w500, iblack.withOpacity(0.5))
+            txt.textWidget(
+                date, 11.0, FontWeight.w500, iblack.withOpacity(0.5)),
           ],
         ),
       ],
