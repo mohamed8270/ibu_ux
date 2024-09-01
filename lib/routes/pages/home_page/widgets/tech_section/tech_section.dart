@@ -14,13 +14,41 @@ class TechSection extends StatelessWidget {
   Widget build(BuildContext context) {
     var scrnsize = MediaQuery.sizeOf(context);
     var txt = TextFond();
+    var vh = [0.0, 0.0];
+
+    void responCheck() {
+      if (ResponsiveWidget.isLarge(context)) {
+        var res = [40.0, 60.0];
+        return vh.replaceRange(0, 1, res);
+      } else if (ResponsiveWidget.isMedium(context)) {
+        var res = [30.0, 40.0];
+        return vh.replaceRange(0, 1, res);
+      } else if (ResponsiveWidget.isSmall(context)) {
+        var res = [30.0, 20.0];
+        return vh.replaceRange(0, 1, res);
+      }
+    }
+
+    Axis directCheck() {
+      if (ResponsiveWidget.isLarge(context)) {
+        return Axis.horizontal;
+      } else if (ResponsiveWidget.isMedium(context)) {
+        return Axis.horizontal;
+      } else if (ResponsiveWidget.isSmall(context)) {
+        return Axis.vertical;
+      }
+      return Axis.horizontal;
+    }
+
+    responCheck();
     return Container(
       height: scrnsize.height * 0.6,
       width: scrnsize.width,
       decoration: const BoxDecoration(color: iwhite),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 60),
-        child: Row(
+        padding: EdgeInsets.symmetric(vertical: vh[0], horizontal: vh[1]),
+        child: Flex(
+          direction: directCheck(),
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -30,7 +58,7 @@ class TechSection extends StatelessWidget {
               children: [
                 txt.textWidget(
                     StaticData.techtitle, 34.0, FontWeight.w500, iblack),
-                const Gap(40),
+                Gap(ResponsiveWidget.isLarge(context) ? 40 : 20),
                 SizedBox(
                   width: ResponsiveWidget.isLarge(context)
                       ? scrnsize.width * 0.4
@@ -42,7 +70,9 @@ class TechSection extends StatelessWidget {
                       iblack,
                       TextOverflow.visible,
                       1.5,
-                      TextAlign.start),
+                      ResponsiveWidget.isLarge(context)
+                          ? TextAlign.start
+                          : TextAlign.justify),
                 ),
               ],
             ),
@@ -62,13 +92,15 @@ class GridTechShow extends StatelessWidget {
     var scrnsize = MediaQuery.sizeOf(context);
     var techdata = Get.put(LocalDataRepository());
     return SizedBox(
-      width: scrnsize.width * 0.45,
+      width: ResponsiveWidget.isLarge(context)
+          ? scrnsize.width * 0.45
+          : scrnsize.width,
       child: GridView.builder(
         shrinkWrap: true,
         itemCount: techdata.techData.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 4,
-            mainAxisSpacing: 20,
+            crossAxisCount: ResponsiveWidget.isLarge(context) ? 4 : 3,
+            mainAxisSpacing: 30,
             crossAxisSpacing: 20,
             childAspectRatio: scrnsize.width / (scrnsize.height / 1.0)),
         itemBuilder: (context, i) {
@@ -79,6 +111,7 @@ class GridTechShow extends StatelessWidget {
               image: DecorationImage(
                 image: NetworkImage(data['img'].toString()),
                 fit: BoxFit.scaleDown,
+                alignment: Alignment.center,
                 filterQuality: FilterQuality.high,
               ),
             ),
