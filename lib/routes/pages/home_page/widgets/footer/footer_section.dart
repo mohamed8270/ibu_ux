@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:ibu_ux/bindings/controller/responsive_widget.dart';
 import 'package:ibu_ux/common/styles/fonts.dart';
@@ -15,7 +16,7 @@ class FooterSection extends StatelessWidget {
     var txt = TextFond();
     return Padding(
       padding: EdgeInsets.symmetric(
-          horizontal: ResponsiveWidget.isLarge(context) ? 20.0 : 60,
+          horizontal: ResponsiveWidget.isLarge(context) ? 60.0 : 20,
           vertical: ResponsiveWidget.isLarge(context) ? 30 : 40),
       child: Container(
         height: ResponsiveWidget.isLarge(context)
@@ -30,7 +31,15 @@ class FooterSection extends StatelessWidget {
             txt.textWidget('Have a project?', 14.0, FontWeight.w500, iblack),
             StaticData.gap2,
             txt.textWidget(
-                "Let's have a conversation", 34.0, FontWeight.w500, iblack),
+                "Let's have a conversation",
+                34.0,
+                FontWeight.w500,
+                iblack,
+                TextOverflow.visible,
+                1.5,
+                ResponsiveWidget.isLarge(context)
+                    ? TextAlign.center
+                    : TextAlign.center),
             StaticData.gap3,
             ButtonBox(
               t: 'Talk with me',
@@ -39,6 +48,33 @@ class FooterSection extends StatelessWidget {
               click: () {},
               hover: (h0) {},
               w: ResponsiveWidget.isLarge(context) ? 0.1 : 0.4,
+            ),
+            StaticData.gap3,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SocialIcons(
+                  path: StaticData.dribble,
+                  click: () {},
+                  hover: (h0) {},
+                ),
+                SocialIcons(
+                  path: StaticData.instagram,
+                  click: () {},
+                  hover: (h0) {},
+                ),
+                SocialIcons(
+                  path: StaticData.youtube,
+                  click: () {},
+                  hover: (h0) {},
+                ),
+                SocialIcons(
+                  path: StaticData.github,
+                  click: () {},
+                  hover: (h0) {},
+                ),
+              ],
             ),
             Gap(ResponsiveWidget.isLarge(context) ? 160 : 30),
             RichText(
@@ -57,6 +93,32 @@ class FooterSection extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class SocialIcons extends StatelessWidget {
+  const SocialIcons(
+      {super.key,
+      required this.path,
+      required this.click,
+      required this.hover});
+
+  final String path;
+  final VoidCallback click;
+  final Function(bool) hover;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: click,
+      onHover: hover,
+      child: SvgPicture.asset(
+        path,
+        height: 20,
+        width: 20,
+        colorFilter: const ColorFilter.mode(iblack, BlendMode.srcIn),
       ),
     );
   }
