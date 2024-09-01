@@ -6,6 +6,7 @@ import 'package:ibu_ux/common/styles/fonts.dart';
 import 'package:ibu_ux/common/styles/static.dart';
 import 'package:ibu_ux/common/styles/theme.dart';
 import 'package:ibu_ux/data/repository/local_data_repository.dart';
+import 'package:ibu_ux/routes/pages/home_page/widgets/footer/footer_section.dart';
 
 class WorksSection extends StatelessWidget {
   const WorksSection({super.key});
@@ -30,8 +31,26 @@ class WorksSection extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(
                   horizontal: ResponsiveWidget.isLarge(context) ? 60 : 20),
-              child:
-                  txt.textWidget('Works done', 34.0, FontWeight.w500, iblack),
+              child: Row(
+                children: [
+                  Expanded(
+                      child: txt.textWidget(
+                          'Works done', 34.0, FontWeight.w500, iblack)),
+                  SocialIcons(
+                    path: StaticData.leftarrow,
+                    click: () {},
+                    hover: (h0) {},
+                    size: 30,
+                  ),
+                  StaticData.gap4,
+                  SocialIcons(
+                    path: StaticData.rightarrow,
+                    click: () {},
+                    hover: (h0) {},
+                    size: 30,
+                  ),
+                ],
+              ),
             ),
             const Gap(40),
             SizedBox(
