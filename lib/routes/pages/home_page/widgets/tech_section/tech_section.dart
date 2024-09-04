@@ -24,7 +24,7 @@ class TechSection extends StatelessWidget {
         var res = [30.0, 40.0];
         return vh.replaceRange(0, 1, res);
       } else if (ResponsiveWidget.isSmall(context)) {
-        var res = [30.0, 20.0];
+        var res = [40.0, 20.0];
         return vh.replaceRange(0, 1, res);
       }
     }
@@ -42,7 +42,9 @@ class TechSection extends StatelessWidget {
 
     responCheck();
     return Container(
-      height: scrnsize.height * 0.6,
+      height: ResponsiveWidget.isLarge(context)
+          ? scrnsize.height * 0.6
+          : scrnsize.height * 0.7,
       width: scrnsize.width,
       decoration: const BoxDecoration(color: iwhite),
       child: Padding(

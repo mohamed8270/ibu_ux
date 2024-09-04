@@ -24,7 +24,7 @@ class WorksSection extends StatelessWidget {
       decoration: const BoxDecoration(color: iyellow),
       child: Padding(
         padding: EdgeInsets.symmetric(
-            vertical: ResponsiveWidget.isLarge(context) ? 40 : 30),
+            vertical: ResponsiveWidget.isLarge(context) ? 40 : 40),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

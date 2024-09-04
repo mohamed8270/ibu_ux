@@ -13,7 +13,9 @@ class HeroSection extends StatelessWidget {
     var scrnsize = MediaQuery.sizeOf(context);
     var txt = TextFond();
     return Container(
-      height: scrnsize.height * 0.75,
+      height: ResponsiveWidget.isLarge(context)
+          ? scrnsize.height * 0.75
+          : scrnsize.height * 0.85,
       width: scrnsize.width,
       decoration: const BoxDecoration(color: iwhite),
       alignment: Alignment.center,
@@ -120,7 +122,7 @@ class ButtonBox extends StatelessWidget {
         width: scrnsize.width * w,
         decoration: BoxDecoration(
           color: bc,
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(0),
           border: border,
         ),
         alignment: Alignment.center,

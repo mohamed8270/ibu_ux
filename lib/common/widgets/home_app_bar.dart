@@ -170,7 +170,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                     : scrnsize.width * 0.25,
                 decoration: BoxDecoration(
                   color: iblack,
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(0),
                 ),
                 alignment: Alignment.center,
                 child: txt.textWidget('Contact', 12.0, FontWeight.w400, iwhite),
