@@ -47,6 +47,7 @@ class TechSection extends StatelessWidget {
           : scrnsize.height * 0.7,
       width: scrnsize.width,
       decoration: const BoxDecoration(color: iwhite),
+      alignment: Alignment.center,
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: vh[0], horizontal: vh[1]),
         child: Flex(

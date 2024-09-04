@@ -17,6 +17,7 @@ class ExperienceAwards extends StatelessWidget {
       height: scrnsize.height * sizeForContainer(),
       width: scrnsize.width,
       decoration: const BoxDecoration(color: iyellow),
+      alignment: Alignment.center,
       child: Padding(
         padding: EdgeInsets.symmetric(
             horizontal: ResponsiveWidget.isLarge(context) ? 60 : 20,

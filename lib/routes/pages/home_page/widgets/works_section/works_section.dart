@@ -19,9 +19,10 @@ class WorksSection extends StatelessWidget {
     return Container(
       height: ResponsiveWidget.isLarge(context)
           ? (scrnsize.height * 0.65)
-          : (scrnsize.height * 0.45),
+          : (scrnsize.height * 0.5),
       width: scrnsize.width,
       decoration: const BoxDecoration(color: iyellow),
+      alignment: Alignment.center,
       child: Padding(
         padding: EdgeInsets.symmetric(
             vertical: ResponsiveWidget.isLarge(context) ? 40 : 40),
