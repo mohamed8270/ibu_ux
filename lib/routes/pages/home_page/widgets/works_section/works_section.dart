@@ -35,19 +35,25 @@ class WorksSection extends StatelessWidget {
                   Expanded(
                       child: txt.textWidget(
                           'Works done', 34.0, FontWeight.w500, iblack)),
-                  SocialIcons(
-                    path: StaticData.leftarrow,
-                    click: () {},
-                    hover: (h0) {},
-                    size: 30,
-                  ),
-                  StaticData.gap4,
-                  SocialIcons(
-                    path: StaticData.rightarrow,
-                    click: () {},
-                    hover: (h0) {},
-                    size: 30,
-                  ),
+                  ResponsiveWidget.isLarge(context)
+                      ? SocialIcons(
+                          path: StaticData.leftarrow,
+                          click: () {},
+                          hover: (h0) {},
+                          size: 30,
+                        )
+                      : const Gap(0),
+                  ResponsiveWidget.isLarge(context)
+                      ? StaticData.gap4
+                      : const Gap(0),
+                  ResponsiveWidget.isLarge(context)
+                      ? SocialIcons(
+                          path: StaticData.rightarrow,
+                          click: () {},
+                          hover: (h0) {},
+                          size: 30,
+                        )
+                      : const Gap(0),
                 ],
               ),
             ),
