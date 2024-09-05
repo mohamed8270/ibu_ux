@@ -6,6 +6,7 @@ import 'package:ibu_ux/common/styles/fonts.dart';
 import 'package:ibu_ux/common/styles/static.dart';
 import 'package:ibu_ux/common/styles/theme.dart';
 import 'package:ibu_ux/data/repository/local_data_repository.dart';
+import 'package:ibu_ux/routes/pages/home_page/widgets/hero_section/hero_section.dart';
 
 class TechSection extends StatelessWidget {
   const TechSection({super.key});
@@ -59,7 +60,7 @@ class TechSection extends StatelessWidget {
               children: [
                 txt.textWidget(
                     StaticData.techtitle, 34.0, FontWeight.w500, iblack),
-                Gap(ResponsiveWidget.isLarge(context) ? 40 : 20),
+                Gap(ResponsiveWidget.isLarge(context) ? 20 : 20),
                 SizedBox(
                   width: ResponsiveWidget.isLarge(context)
                       ? scrnsize.width * 0.4
@@ -74,6 +75,15 @@ class TechSection extends StatelessWidget {
                       ResponsiveWidget.isLarge(context)
                           ? TextAlign.start
                           : TextAlign.justify),
+                ),
+                const Gap(30),
+                ButtonBox(
+                  t: StaticData.btntxt1,
+                  tc: iwhite,
+                  bc: iblack,
+                  w: ResponsiveWidget.isLarge(context) ? 0.1 : 0.4,
+                  click: () {},
+                  hover: (h) {},
                 ),
               ],
             ),
@@ -104,7 +114,7 @@ class GridTechShow extends StatelessWidget {
             crossAxisCount: ResponsiveWidget.isLarge(context) ? 4 : 3,
             mainAxisSpacing: 30,
             crossAxisSpacing: 20,
-            childAspectRatio: 2),
+            childAspectRatio: 3),
         itemBuilder: (context, i) {
           final data = techdata.techData[i];
           return Container(

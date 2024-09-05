@@ -120,7 +120,7 @@ class ButtonBox extends StatelessWidget {
         width: scrnsize.width * w,
         decoration: BoxDecoration(
           color: bc,
-          borderRadius: BorderRadius.circular(0),
+          borderRadius: BorderRadius.circular(10),
           border: border,
         ),
         alignment: Alignment.center,
