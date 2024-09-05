@@ -13,6 +13,7 @@ class ReusableWidget extends StatelessWidget {
     var txt = TextFond();
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         txt.textWidget(StaticData.heading1, 34.0, FontWeight.w500, iblack),
         const Gap(50),
@@ -50,6 +51,7 @@ class ReusableWidget2 extends StatelessWidget {
     var txt = TextFond();
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         txt.textWidget(StaticData.heading2, 34.0, FontWeight.w500, iblack),
         const Gap(50),
