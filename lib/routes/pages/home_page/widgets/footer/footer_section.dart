@@ -24,66 +24,70 @@ class FooterSection extends StatelessWidget {
             : scrnsize.height * 0.4,
         width: scrnsize.width,
         decoration: const BoxDecoration(color: iwhite),
-        alignment: Alignment.center,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            txt.textWidget('Have a project?', 14.0, FontWeight.w500, iblack),
-            StaticData.gap2,
-            txt.textWidget(
-                "Let's have a conversation",
-                ResponsiveWidget.isLarge(context) ? 34.0 : 24.0,
-                FontWeight.w500,
-                iblack,
-                TextOverflow.visible,
-                1.5,
-                ResponsiveWidget.isLarge(context)
-                    ? TextAlign.center
-                    : TextAlign.center),
-            StaticData.gap3,
-            ButtonBox(
-              t: 'Talk with me',
-              tc: iwhite,
-              bc: iblack,
-              click: () {},
-              hover: (h0) {},
-              w: ResponsiveWidget.isLarge(context) ? 0.1 : 0.4,
+            Expanded(
+              child: Column(
+                children: [
+                  txt.textWidget(
+                      'Have a project?', 14.0, FontWeight.w500, iblack),
+                  StaticData.gap2,
+                  txt.textWidget(
+                      "Let's have a conversation",
+                      ResponsiveWidget.isLarge(context) ? 34.0 : 24.0,
+                      FontWeight.w500,
+                      iblack,
+                      TextOverflow.visible,
+                      1.5,
+                      ResponsiveWidget.isLarge(context)
+                          ? TextAlign.center
+                          : TextAlign.center),
+                  StaticData.gap3,
+                  ButtonBox(
+                    t: 'Talk with me',
+                    tc: iwhite,
+                    bc: iblack,
+                    click: () {},
+                    hover: (h0) {},
+                    w: ResponsiveWidget.isLarge(context) ? 0.1 : 0.4,
+                  ),
+                  const Gap(35),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SocialIcons(
+                        size: 24,
+                        path: StaticData.dribble,
+                        click: () {},
+                        hover: (h0) {},
+                      ),
+                      StaticData.gap3,
+                      SocialIcons(
+                        size: 24,
+                        path: StaticData.instagram,
+                        click: () {},
+                        hover: (h0) {},
+                      ),
+                      StaticData.gap3,
+                      SocialIcons(
+                        size: 28,
+                        path: StaticData.youtube,
+                        click: () {},
+                        hover: (h0) {},
+                      ),
+                      StaticData.gap3,
+                      SocialIcons(
+                        size: 27,
+                        path: StaticData.github,
+                        click: () {},
+                        hover: (h0) {},
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-            const Gap(35),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SocialIcons(
-                  size: 24,
-                  path: StaticData.dribble,
-                  click: () {},
-                  hover: (h0) {},
-                ),
-                StaticData.gap3,
-                SocialIcons(
-                  size: 24,
-                  path: StaticData.instagram,
-                  click: () {},
-                  hover: (h0) {},
-                ),
-                StaticData.gap3,
-                SocialIcons(
-                  size: 28,
-                  path: StaticData.youtube,
-                  click: () {},
-                  hover: (h0) {},
-                ),
-                StaticData.gap3,
-                SocialIcons(
-                  size: 27,
-                  path: StaticData.github,
-                  click: () {},
-                  hover: (h0) {},
-                ),
-              ],
-            ),
-            Gap(ResponsiveWidget.isLarge(context) ? 130 : 80),
             RichText(
               text: TextSpan(
                 children: [
