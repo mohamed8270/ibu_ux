@@ -99,6 +99,7 @@ class GridTechShow extends StatelessWidget {
       child: GridView.builder(
         shrinkWrap: true,
         itemCount: techdata.techData.length,
+        physics: const NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: ResponsiveWidget.isLarge(context) ? 4 : 3,
             mainAxisSpacing: 30,
