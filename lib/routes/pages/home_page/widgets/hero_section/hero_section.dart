@@ -13,9 +13,7 @@ class HeroSection extends StatelessWidget {
     var scrnsize = MediaQuery.sizeOf(context);
     var txt = TextFond();
     return Container(
-      height: ResponsiveWidget.isLarge(context)
-          ? scrnsize.height * 0.75
-          : scrnsize.height * 0.85,
+      height: scrnsize.height * 0.65,
       width: scrnsize.width,
       decoration: const BoxDecoration(color: iwhite),
       alignment: Alignment.center,

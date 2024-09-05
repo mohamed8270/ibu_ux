@@ -42,9 +42,7 @@ class TechSection extends StatelessWidget {
 
     responCheck();
     return Container(
-      height: ResponsiveWidget.isLarge(context)
-          ? scrnsize.height * 0.6
-          : scrnsize.height * 0.7,
+      height: scrnsize.height * 0.65,
       width: scrnsize.width,
       decoration: const BoxDecoration(color: iwhite),
       alignment: Alignment.center,

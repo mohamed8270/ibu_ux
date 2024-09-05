@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:ibu_ux/bindings/controller/responsive_widget.dart';
+import 'package:ibu_ux/common/styles/static.dart';
 import 'package:ibu_ux/common/styles/theme.dart';
 import 'package:ibu_ux/routes/pages/home_page/widgets/experience_awards/reusable_widget.dart';
 
@@ -10,7 +12,7 @@ class ExperienceAwards extends StatelessWidget {
   Widget build(BuildContext context) {
     var scrnsize = MediaQuery.sizeOf(context);
     double sizeForContainer() {
-      return ResponsiveWidget.isLarge(context) ? 0.6 : 1;
+      return ResponsiveWidget.isLarge(context) ? 0.65 : 1;
     }
 
     return Container(
@@ -26,11 +28,16 @@ class ExperienceAwards extends StatelessWidget {
           direction: ResponsiveWidget.isLarge(context)
               ? Axis.horizontal
               : Axis.vertical,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
-            ReusableWidget(),
-            ReusableWidget2(),
+          crossAxisAlignment: ResponsiveWidget.isLarge(context)
+              ? CrossAxisAlignment.center
+              : CrossAxisAlignment.start,
+          mainAxisAlignment: ResponsiveWidget.isLarge(context)
+              ? MainAxisAlignment.spaceBetween
+              : MainAxisAlignment.center,
+          children: [
+            const ReusableWidget(),
+            ResponsiveWidget.isLarge(context) ? const Gap(0) : StaticData.gap2,
+            const ReusableWidget2(),
           ],
         ),
       ),

@@ -17,9 +17,7 @@ class WorksSection extends StatelessWidget {
     var txt = TextFond();
     var prodata = Get.put(LocalDataRepository());
     return Container(
-      height: ResponsiveWidget.isLarge(context)
-          ? (scrnsize.height * 0.65)
-          : (scrnsize.height * 0.5),
+      height: scrnsize.height * 0.65,
       width: scrnsize.width,
       decoration: const BoxDecoration(color: iyellow),
       alignment: Alignment.center,
