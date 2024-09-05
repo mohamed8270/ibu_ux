@@ -27,7 +27,9 @@ class HeroSection extends StatelessWidget {
           mainAxisAlignment: ResponsiveWidget.isLarge(context)
               ? MainAxisAlignment.spaceBetween
               : MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: ResponsiveWidget.isLarge(context)
+              ? CrossAxisAlignment.center
+              : CrossAxisAlignment.start,
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,7 +42,10 @@ class HeroSection extends StatelessWidget {
                 ),
                 StaticData.gap3,
                 txt.textWidget(
-                    StaticData.greeting, 56.0, FontWeight.w400, iblack),
+                    StaticData.greeting,
+                    ResponsiveWidget.isLarge(context) ? 56.0 : 40.0,
+                    FontWeight.w400,
+                    iblack),
               ],
             ),
             Gap(scrnsize.width * 0.1),

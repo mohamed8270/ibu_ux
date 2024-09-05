@@ -160,22 +160,25 @@ class _HomeAppBarState extends State<HomeAppBar> {
                     ),
                   )
                 : const SizedBox(),
-            InkWell(
-              onTap: () {},
-              onHover: (value) {},
-              child: Container(
-                height: scrnsize.height * 0.055,
-                width: ResponsiveWidget.isLarge(context)
-                    ? scrnsize.width * 0.1
-                    : scrnsize.width * 0.25,
-                decoration: BoxDecoration(
-                  color: iblack,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                alignment: Alignment.center,
-                child: txt.textWidget('Contact', 12.0, FontWeight.w400, iwhite),
-              ),
-            ),
+            ResponsiveWidget.isLarge(context)
+                ? InkWell(
+                    onTap: () {},
+                    onHover: (value) {},
+                    child: Container(
+                      height: scrnsize.height * 0.055,
+                      width: ResponsiveWidget.isLarge(context)
+                          ? scrnsize.width * 0.1
+                          : scrnsize.width * 0.25,
+                      decoration: BoxDecoration(
+                        color: iblack,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      alignment: Alignment.center,
+                      child: txt.textWidget(
+                          'Contact', 12.0, FontWeight.w400, iwhite),
+                    ),
+                  )
+                : const SizedBox(),
           ],
         ),
       ),

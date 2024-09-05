@@ -32,7 +32,7 @@ class FooterSection extends StatelessWidget {
             StaticData.gap2,
             txt.textWidget(
                 "Let's have a conversation",
-                34.0,
+                ResponsiveWidget.isLarge(context) ? 34.0 : 24.0,
                 FontWeight.w500,
                 iblack,
                 TextOverflow.visible,

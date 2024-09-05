@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: iwhite,
       appBar: PreferredSize(
-        preferredSize: Size(scrnsize.width, 80),
+        preferredSize: Size(scrnsize.width, 70),
         child: HomeAppBar(
           color: color,
           homeTap: () => scrollToTap(0),

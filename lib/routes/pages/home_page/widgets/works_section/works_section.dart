@@ -34,7 +34,10 @@ class WorksSection extends StatelessWidget {
                 children: [
                   Expanded(
                       child: txt.textWidget(
-                          'Works done', 34.0, FontWeight.w500, iblack)),
+                          'Works done',
+                          ResponsiveWidget.isLarge(context) ? 34.0 : 24.0,
+                          FontWeight.w500,
+                          iblack)),
                   ResponsiveWidget.isLarge(context)
                       ? SocialIcons(
                           path: StaticData.leftarrow,

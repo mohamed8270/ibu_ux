@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:ibu_ux/bindings/controller/responsive_widget.dart';
 import 'package:ibu_ux/common/styles/fonts.dart';
 import 'package:ibu_ux/common/styles/static.dart';
 import 'package:ibu_ux/common/styles/theme.dart';
@@ -15,7 +16,11 @@ class ReusableWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        txt.textWidget(StaticData.heading1, 34.0, FontWeight.w500, iblack),
+        txt.textWidget(
+            StaticData.heading1,
+            ResponsiveWidget.isLarge(context) ? 34.0 : 24.0,
+            FontWeight.w500,
+            iblack),
         const Gap(50),
         ReusableContent(
             title: StaticData.role1,
@@ -53,7 +58,11 @@ class ReusableWidget2 extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        txt.textWidget(StaticData.heading2, 34.0, FontWeight.w500, iblack),
+        txt.textWidget(
+            StaticData.heading2,
+            ResponsiveWidget.isLarge(context) ? 34.0 : 24.0,
+            FontWeight.w500,
+            iblack),
         const Gap(50),
         ReusableContent(
             title: StaticData.awa1,

@@ -59,7 +59,10 @@ class TechSection extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 txt.textWidget(
-                    StaticData.techtitle, 34.0, FontWeight.w500, iblack),
+                    StaticData.techtitle,
+                    ResponsiveWidget.isLarge(context) ? 34.0 : 24.0,
+                    FontWeight.w500,
+                    iblack),
                 Gap(ResponsiveWidget.isLarge(context) ? 20 : 20),
                 SizedBox(
                   width: ResponsiveWidget.isLarge(context)
