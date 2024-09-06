@@ -117,7 +117,7 @@ class GridTechShow extends StatelessWidget {
             crossAxisCount: ResponsiveWidget.isLarge(context) ? 4 : 3,
             mainAxisSpacing: 30,
             crossAxisSpacing: 20,
-            childAspectRatio: 3),
+            childAspectRatio: 2),
         itemBuilder: (context, i) {
           final data = techdata.techData[i];
           return Container(

@@ -17,7 +17,7 @@ class FooterSection extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(
           horizontal: ResponsiveWidget.isLarge(context) ? 60.0 : 20,
-          vertical: ResponsiveWidget.isLarge(context) ? 30 : 40),
+          vertical: ResponsiveWidget.isLarge(context) ? 30 : 20),
       child: Container(
         height: ResponsiveWidget.isLarge(context)
             ? scrnsize.height * 0.5
