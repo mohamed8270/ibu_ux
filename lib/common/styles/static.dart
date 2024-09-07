@@ -16,16 +16,15 @@ class StaticData {
 
 // title
   static String appname = 'Ibu ux';
-  static String home = 'Home';
-  static String about = 'About us';
-  static String content = 'Contents';
-  static String service = 'Our services';
+  static String linked = 'LinkedIn';
+  static String gitHub = 'GitHub';
+  static String insta = 'Instagram';
+  static String yout = 'YouTube';
 
 // hero descriptions
-  static String greeting = "Hello! I'am Mohamed\nIbrahim";
-  static String hertxt = 'A Cross-Platform Developer\nbased in India';
+  static String greeting = "Hi, I'am Mohamed Ibrahim 👋";
+  static String hertxt = 'Building digital\nproducts, brands and\nexperience.';
   static String btntxt1 = 'Talk with me';
-  static String btntxt2 = 'See my work';
 
 // experience
   static String heading1 = 'Work Experience';

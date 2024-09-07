@@ -13,82 +13,49 @@ class HeroSection extends StatelessWidget {
     var scrnsize = MediaQuery.sizeOf(context);
     var txt = TextFond();
     return Container(
-      height: scrnsize.height * 0.65,
+      height: scrnsize.height * 0.75,
       width: scrnsize.width,
-      decoration: const BoxDecoration(color: iwhite),
+      decoration: const BoxDecoration(color: iblack),
       alignment: Alignment.center,
-      child: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: ResponsiveWidget.isLarge(context) ? 60 : 20),
-        child: Flex(
-          direction: ResponsiveWidget.isLarge(context)
-              ? Axis.horizontal
-              : Axis.vertical,
-          mainAxisAlignment: ResponsiveWidget.isLarge(context)
-              ? MainAxisAlignment.spaceBetween
-              : MainAxisAlignment.center,
-          crossAxisAlignment: ResponsiveWidget.isLarge(context)
-              ? CrossAxisAlignment.center
-              : CrossAxisAlignment.start,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CircleAvatar(
-                  radius: 25,
-                  backgroundColor: igrey,
-                  backgroundImage: NetworkImage(StaticData.blazer),
-                ),
-                StaticData.gap3,
-                txt.textWidget(
-                    StaticData.greeting,
-                    ResponsiveWidget.isLarge(context) ? 56.0 : 40.0,
-                    FontWeight.w400,
-                    iblack),
-              ],
+      child: Flex(
+        direction: Axis.vertical,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          CircleAvatar(
+            radius: 50,
+            backgroundColor: iwhite.withOpacity(0.09),
+            child: ClipOval(
+              child: Image.network(
+                StaticData.blazer,
+                height: 100,
+                width: 100,
+                fit: BoxFit.cover,
+              ),
             ),
-            Gap(scrnsize.width * 0.1),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                txt.textWidget(
-                    StaticData.hertxt,
-                    ResponsiveWidget.isLarge(context) ? 40.0 : 22.0,
-                    FontWeight.w400,
-                    iblack),
-                StaticData.gap2,
-                txt.textWidget(StaticData.herosub, 14.0, FontWeight.w400,
-                    iblack.withOpacity(0.6)),
-                const Gap(50),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    ButtonBox(
-                      t: StaticData.btntxt1,
-                      tc: iwhite,
-                      bc: iblack,
-                      w: ResponsiveWidget.isLarge(context) ? 0.1 : 0.4,
-                      click: () {},
-                      hover: (h) {},
-                    ),
-                    StaticData.gap2,
-                    ButtonBox(
-                      t: StaticData.btntxt2,
-                      tc: iblack,
-                      bc: Colors.transparent,
-                      w: ResponsiveWidget.isLarge(context) ? 0.1 : 0.4,
-                      border: Border.all(width: 1.5, color: igrey),
-                      click: () {},
-                      hover: (h) {},
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ],
-        ),
+          ),
+          const Gap(20),
+          txt.textWidget(StaticData.greeting, 12.0, FontWeight.w300, iwhite),
+          const Gap(40),
+          txt.textWidget(
+              StaticData.hertxt,
+              ResponsiveWidget.isLarge(context) ? 42.0 : 30.0,
+              FontWeight.w400,
+              iwhite,
+              TextOverflow.visible,
+              1.5,
+              TextAlign.center),
+          const Gap(40),
+          ButtonBox(
+            t: StaticData.btntxt1,
+            tc: iwhite,
+            bc: iwhite.withOpacity(0.05),
+            w: ResponsiveWidget.isLarge(context) ? 0.1 : 0.4,
+            border: Border.all(width: 1, color: iwhite.withOpacity(0.15)),
+            click: () {},
+            hover: (h) {},
+          ),
+        ],
       ),
     );
   }
@@ -125,7 +92,7 @@ class ButtonBox extends StatelessWidget {
         width: scrnsize.width * w,
         decoration: BoxDecoration(
           color: bc,
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(0),
           border: border,
         ),
         alignment: Alignment.center,

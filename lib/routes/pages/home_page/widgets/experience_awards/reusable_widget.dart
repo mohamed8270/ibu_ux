@@ -19,8 +19,8 @@ class ReusableWidget extends StatelessWidget {
         txt.textWidget(
             StaticData.heading1,
             ResponsiveWidget.isLarge(context) ? 34.0 : 24.0,
-            FontWeight.w500,
-            iblack),
+            FontWeight.w400,
+            iwhite),
         const Gap(50),
         ReusableContent(
             title: StaticData.role1,
@@ -61,8 +61,8 @@ class ReusableWidget2 extends StatelessWidget {
         txt.textWidget(
             StaticData.heading2,
             ResponsiveWidget.isLarge(context) ? 34.0 : 24.0,
-            FontWeight.w500,
-            iblack),
+            FontWeight.w400,
+            iwhite),
         const Gap(50),
         ReusableContent(
             title: StaticData.awa1,

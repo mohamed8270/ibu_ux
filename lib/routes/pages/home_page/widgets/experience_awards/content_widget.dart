@@ -33,7 +33,7 @@ class ReusableContent extends StatelessWidget {
           height: scrnsize.height * 0.065,
           width: scrnsize.width * sizeForContainer(),
           decoration: BoxDecoration(
-            color: iwhite,
+            color: iwhite.withOpacity(0.05),
             borderRadius: BorderRadius.circular(7),
             image: DecorationImage(
               image: NetworkImage(img),
@@ -56,11 +56,11 @@ class ReusableContent extends StatelessWidget {
                   children: [
                     TextSpan(
                       text: title,
-                      style: txt.textStyle(13.0, FontWeight.w500, iblack),
+                      style: txt.textStyle(13.0, FontWeight.w400, iwhite),
                     ),
                     TextSpan(
                       text: title2,
-                      style: txt.textStyle(13.0, FontWeight.w700, iblack),
+                      style: txt.textStyle(13.0, FontWeight.w700, iwhite),
                     ),
                   ],
                 ),
@@ -68,7 +68,7 @@ class ReusableContent extends StatelessWidget {
             ),
             StaticData.gap1,
             txt.textWidget(
-                date, 11.0, FontWeight.w500, iblack.withOpacity(0.5)),
+                date, 11.0, FontWeight.w300, iwhite.withOpacity(0.3)),
           ],
         ),
       ],
@@ -86,10 +86,10 @@ class DividerWidget extends StatelessWidget {
       width: ResponsiveWidget.isLarge(context)
           ? scrnsize.width * 0.3
           : scrnsize.width,
-      child: const Divider(
+      child: Divider(
         thickness: 1,
         height: 1,
-        color: igrey,
+        color: iwhite.withOpacity(0.1),
       ),
     );
   }

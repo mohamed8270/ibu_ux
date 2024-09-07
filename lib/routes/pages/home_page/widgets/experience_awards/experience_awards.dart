@@ -11,13 +11,13 @@ class ExperienceAwards extends StatelessWidget {
   Widget build(BuildContext context) {
     var scrnsize = MediaQuery.sizeOf(context);
     double sizeForContainer() {
-      return ResponsiveWidget.isLarge(context) ? 0.65 : 1;
+      return ResponsiveWidget.isLarge(context) ? 0.75 : 1;
     }
 
     return Container(
       height: scrnsize.height * sizeForContainer(),
       width: scrnsize.width,
-      decoration: const BoxDecoration(color: iyellow),
+      decoration: const BoxDecoration(color: iblack),
       alignment: Alignment.center,
       child: Padding(
         padding: EdgeInsets.symmetric(
