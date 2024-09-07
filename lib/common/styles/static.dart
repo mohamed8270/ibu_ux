@@ -68,7 +68,7 @@ class StaticData {
 
 // technology stack
   static String techtitle =
-      'Experience with a variety of projects\nand technologies';
+      'Experience with a variety of projects and technologies';
   static String techdes =
       'Cutting-Edge Technology: We stay at the forefront of latest technology, Constantly exploring new tools and techniques so that we can provide the our clients a better results to thier specific needs';
 

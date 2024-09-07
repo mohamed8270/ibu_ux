@@ -11,7 +11,7 @@ class ExperienceAwards extends StatelessWidget {
   Widget build(BuildContext context) {
     var scrnsize = MediaQuery.sizeOf(context);
     double sizeForContainer() {
-      return ResponsiveWidget.isLarge(context) ? 0.75 : 1;
+      return ResponsiveWidget.isLarge(context) ? 0.75 : 1.2;
     }
 
     return Container(

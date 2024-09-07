@@ -19,7 +19,7 @@ class WorksSection extends StatelessWidget {
     return Container(
       height: scrnsize.height * 0.65,
       width: scrnsize.width,
-      decoration: const BoxDecoration(color: iyellow),
+      decoration: const BoxDecoration(color: iblack),
       alignment: Alignment.center,
       child: Padding(
         padding: EdgeInsets.symmetric(
@@ -36,14 +36,14 @@ class WorksSection extends StatelessWidget {
                       child: txt.textWidget(
                           'Works done',
                           ResponsiveWidget.isLarge(context) ? 34.0 : 24.0,
-                          FontWeight.w500,
-                          iblack)),
+                          FontWeight.w400,
+                          iwhite)),
                   ResponsiveWidget.isLarge(context)
                       ? SocialIcons(
                           path: StaticData.leftarrow,
                           click: () {},
                           hover: (h0) {},
-                          size: 30,
+                          size: 20,
                         )
                       : const Gap(0),
                   ResponsiveWidget.isLarge(context)
@@ -54,7 +54,7 @@ class WorksSection extends StatelessWidget {
                           path: StaticData.rightarrow,
                           click: () {},
                           hover: (h0) {},
-                          size: 30,
+                          size: 20,
                         )
                       : const Gap(0),
                 ],
@@ -120,7 +120,7 @@ class WorksContent extends StatelessWidget {
                 ? (scrnsize.width * 0.25)
                 : (scrnsize.width * 0.65),
             decoration: BoxDecoration(
-              color: igrey.withOpacity(0.6),
+              color: iwhite.withOpacity(0.05),
               image: DecorationImage(
                 image: NetworkImage(imgurl),
                 fit: BoxFit.cover,
@@ -130,14 +130,20 @@ class WorksContent extends StatelessWidget {
             ),
           ),
           StaticData.gap2,
-          txt.textWidget(t, 14.0, FontWeight.w600, iblack),
+          txt.textWidget(t, 14.0, FontWeight.w400, iwhite),
           StaticData.gap1,
           SizedBox(
             width: ResponsiveWidget.isLarge(context)
                 ? (scrnsize.width * 0.25)
                 : (scrnsize.width * 0.65),
-            child: txt.textWidget(des, 10.0, FontWeight.w500, iblack,
-                TextOverflow.visible, 1.5, TextAlign.justify),
+            child: txt.textWidget(
+                des,
+                10.0,
+                FontWeight.w300,
+                iwhite.withOpacity(0.3),
+                TextOverflow.visible,
+                1.5,
+                TextAlign.justify),
           )
         ],
       ),

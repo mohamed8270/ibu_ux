@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gap/gap.dart';
 import 'package:ibu_ux/bindings/controller/responsive_widget.dart';
 import 'package:ibu_ux/common/styles/fonts.dart';
 import 'package:ibu_ux/common/styles/static.dart';
@@ -23,20 +22,17 @@ class FooterSection extends StatelessWidget {
             ? scrnsize.height * 0.5
             : scrnsize.height * 0.4,
         width: scrnsize.width,
-        decoration: const BoxDecoration(color: iwhite),
+        decoration: const BoxDecoration(color: iblack),
         child: Column(
           children: [
             Expanded(
               child: Column(
                 children: [
                   txt.textWidget(
-                      'Have a project?', 14.0, FontWeight.w500, iblack),
-                  StaticData.gap2,
-                  txt.textWidget(
-                      "Let's have a conversation",
+                      "Tell me about your next project",
                       ResponsiveWidget.isLarge(context) ? 34.0 : 24.0,
-                      FontWeight.w500,
-                      iblack,
+                      FontWeight.w400,
+                      iwhite,
                       TextOverflow.visible,
                       1.5,
                       ResponsiveWidget.isLarge(context)
@@ -44,46 +40,14 @@ class FooterSection extends StatelessWidget {
                           : TextAlign.center),
                   StaticData.gap3,
                   ButtonBox(
-                    t: 'Talk with me',
+                    t: StaticData.btntxt1,
                     tc: iwhite,
-                    bc: iblack,
-                    click: () {},
-                    hover: (h0) {},
+                    bc: iwhite.withOpacity(0.05),
                     w: ResponsiveWidget.isLarge(context) ? 0.1 : 0.4,
-                  ),
-                  const Gap(35),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SocialIcons(
-                        size: 24,
-                        path: StaticData.dribble,
-                        click: () {},
-                        hover: (h0) {},
-                      ),
-                      StaticData.gap3,
-                      SocialIcons(
-                        size: 24,
-                        path: StaticData.instagram,
-                        click: () {},
-                        hover: (h0) {},
-                      ),
-                      StaticData.gap3,
-                      SocialIcons(
-                        size: 28,
-                        path: StaticData.youtube,
-                        click: () {},
-                        hover: (h0) {},
-                      ),
-                      StaticData.gap3,
-                      SocialIcons(
-                        size: 27,
-                        path: StaticData.github,
-                        click: () {},
-                        hover: (h0) {},
-                      ),
-                    ],
+                    border:
+                        Border.all(width: 1, color: iwhite.withOpacity(0.15)),
+                    click: () {},
+                    hover: (h) {},
                   ),
                 ],
               ),
@@ -93,11 +57,12 @@ class FooterSection extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: 'Ibu ux',
-                    style: txt.textStyle(12.0, FontWeight.w700, iblack),
+                    style: txt.textStyle(12.0, FontWeight.w500, iwhite),
                   ),
                   TextSpan(
                     text: ' | 2024 all rights reserved',
-                    style: txt.textStyle(12.0, FontWeight.w400, iblack),
+                    style: txt.textStyle(
+                        12.0, FontWeight.w300, iwhite.withOpacity(0.3)),
                   ),
                 ],
               ),
