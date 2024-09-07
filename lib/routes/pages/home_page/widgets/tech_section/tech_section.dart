@@ -46,8 +46,11 @@ class TechSection extends StatelessWidget {
                 StaticData.techtitle,
                 ResponsiveWidget.isLarge(context) ? 34.0 : 24.0,
                 FontWeight.w400,
-                iwhite),
-            const Gap(40),
+                iwhite,
+                TextOverflow.visible,
+                1.5,
+                TextAlign.center),
+            const Gap(60),
             const GridTechShow(),
           ],
         ),
@@ -64,29 +67,31 @@ class GridTechShow extends StatelessWidget {
     var scrnsize = MediaQuery.sizeOf(context);
     var techdata = Get.put(LocalDataRepository());
     return SizedBox(
-      height: scrnsize.height / 10,
+      height: scrnsize.height / 17,
       width: scrnsize.width,
-      child: ListView.builder(
-        shrinkWrap: true,
-        scrollDirection: Axis.horizontal,
-        itemCount: techdata.techData.length,
-        physics: const ClampingScrollPhysics(),
-        itemBuilder: (context, i) {
-          final data = techdata.techData[i];
-          return Container(
-            height: scrnsize.height * 0.1,
-            width: scrnsize.width / 10,
-            decoration: BoxDecoration(
-              color: Colors.transparent,
-              image: DecorationImage(
-                image: NetworkImage(data['img'].toString()),
-                fit: BoxFit.scaleDown,
-                alignment: Alignment.center,
-                filterQuality: FilterQuality.high,
+      child: Center(
+        child: ListView.builder(
+          shrinkWrap: true,
+          scrollDirection: Axis.horizontal,
+          itemCount: techdata.techData.length,
+          physics: const ClampingScrollPhysics(),
+          itemBuilder: (context, i) {
+            final data = techdata.techData[i];
+            return Container(
+              height: scrnsize.height * 0.1,
+              width: scrnsize.width / 15,
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+                image: DecorationImage(
+                  image: NetworkImage(data['img'].toString()),
+                  fit: BoxFit.scaleDown,
+                  alignment: Alignment.center,
+                  filterQuality: FilterQuality.high,
+                ),
               ),
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }

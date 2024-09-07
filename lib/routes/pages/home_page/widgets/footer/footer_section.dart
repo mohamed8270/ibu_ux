@@ -6,9 +6,15 @@ import 'package:ibu_ux/common/styles/static.dart';
 import 'package:ibu_ux/common/styles/theme.dart';
 import 'package:ibu_ux/routes/pages/home_page/widgets/hero_section/hero_section.dart';
 
-class FooterSection extends StatelessWidget {
+class FooterSection extends StatefulWidget {
   const FooterSection({super.key});
 
+  @override
+  State<FooterSection> createState() => _FooterSectionState();
+}
+
+class _FooterSectionState extends State<FooterSection> {
+  var isHover = false;
   @override
   Widget build(BuildContext context) {
     var scrnsize = MediaQuery.sizeOf(context);
@@ -38,16 +44,20 @@ class FooterSection extends StatelessWidget {
                       ResponsiveWidget.isLarge(context)
                           ? TextAlign.center
                           : TextAlign.center),
-                  StaticData.gap3,
+                  StaticData.gap4,
                   ButtonBox(
                     t: StaticData.btntxt1,
                     tc: iwhite,
-                    bc: iwhite.withOpacity(0.05),
+                    bc: isHover ? Colors.transparent : iwhite.withOpacity(0.05),
                     w: ResponsiveWidget.isLarge(context) ? 0.1 : 0.4,
                     border:
                         Border.all(width: 1, color: iwhite.withOpacity(0.15)),
                     click: () {},
-                    hover: (h) {},
+                    hover: (h) {
+                      setState(() {
+                        isHover = h;
+                      });
+                    },
                   ),
                 ],
               ),
@@ -62,7 +72,7 @@ class FooterSection extends StatelessWidget {
                   TextSpan(
                     text: ' | 2024 all rights reserved',
                     style: txt.textStyle(
-                        12.0, FontWeight.w300, iwhite.withOpacity(0.3)),
+                        12.0, FontWeight.w300, iwhite.withOpacity(0.4)),
                   ),
                 ],
               ),

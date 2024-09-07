@@ -22,11 +22,11 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: iblack,
       appBar: PreferredSize(
         preferredSize: Size(scrnsize.width, 70),
-        child: HomeAppBar(),
+        child: const HomeAppBar(),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: const Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             HeroSection(),

@@ -5,9 +5,15 @@ import 'package:ibu_ux/common/styles/fonts.dart';
 import 'package:ibu_ux/common/styles/static.dart';
 import 'package:ibu_ux/common/styles/theme.dart';
 
-class HeroSection extends StatelessWidget {
+class HeroSection extends StatefulWidget {
   const HeroSection({super.key});
 
+  @override
+  State<HeroSection> createState() => _HeroSectionState();
+}
+
+class _HeroSectionState extends State<HeroSection> {
+  var isHover = false;
   @override
   Widget build(BuildContext context) {
     var scrnsize = MediaQuery.sizeOf(context);
@@ -49,11 +55,15 @@ class HeroSection extends StatelessWidget {
           ButtonBox(
             t: StaticData.btntxt1,
             tc: iwhite,
-            bc: iwhite.withOpacity(0.05),
+            bc: isHover ? Colors.transparent : iwhite.withOpacity(0.05),
             w: ResponsiveWidget.isLarge(context) ? 0.1 : 0.4,
             border: Border.all(width: 1, color: iwhite.withOpacity(0.15)),
             click: () {},
-            hover: (h) {},
+            hover: (h) {
+              setState(() {
+                isHover = h;
+              });
+            },
           ),
         ],
       ),

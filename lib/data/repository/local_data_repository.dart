@@ -51,47 +51,47 @@ class LocalDataRepository extends GetxController {
     {
       'name': 'Flutter',
       'img':
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Google-flutter-logo.svg/2560px-Google-flutter-logo.svg.png',
+          'https://seeklogo.com/images/F/flutter-logo-5086DD11C5-seeklogo.com.png',
       'alt': 'Flutter',
     },
     {
       'name': 'React js',
       'img':
-          'https://cdn.icon-icons.com/icons2/2699/PNG/512/reactjs_logo_icon_170805.png',
+          'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png',
       'alt': 'React js',
     },
     {
       'name': 'Next js',
       'img':
-          'https://cdn.freelogovectors.net/wp-content/uploads/2023/09/next-js-logo-freelogovectors.net_.png',
+          'https://marcbruederlin.gallerycdn.vsassets.io/extensions/marcbruederlin/next-icons/0.1.0/1723747598319/Microsoft.VisualStudio.Services.Icons.Default',
       'alt': 'Next js',
     },
     {
       'name': 'MERN',
-      'img':
-          'https://upload.wikimedia.org/wikipedia/commons/9/94/MERN-logo.png',
+      'img': 'https://arkinfosoft.com/media/vxylqtub/group-1321316476.png',
       'alt': 'MERN',
     },
     {
       'name': 'MongoDB',
       'img':
-          'https://seeklogo.com/images/M/mongodb-logo-3659963037-seeklogo.com.png',
+          'https://seeklogo.com/images/M/mongodb-logo-D13D67C930-seeklogo.com.png',
       'alt': 'MongoDB',
     },
     {
       'name': 'Node js',
-      'img': 'https://img.icons8.com/?size=512&id=54087&format=png',
+      'img':
+          'https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png',
       'alt': 'Node js',
     },
     {
       'name': 'Firebase',
-      'img':
-          'https://1000logos.net/wp-content/uploads/2024/05/Firebase-Logo.png',
+      'img': 'https://brandeps.com/logo-download/F/Firebase-logo-02.png',
       'alt': 'Firebase',
     },
     {
       'name': 'Supabase',
-      'img': 'https://lsvp.com/wp-content/uploads/2023/03/Supabase.png',
+      'img':
+          'https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png',
       'alt': 'Supabase',
     },
   ];
