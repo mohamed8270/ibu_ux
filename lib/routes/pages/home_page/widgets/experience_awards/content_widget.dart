@@ -33,7 +33,7 @@ class ReusableContent extends StatelessWidget {
           height: scrnsize.height * 0.065,
           width: scrnsize.width * sizeForContainer(),
           decoration: BoxDecoration(
-            color: iwhite.withOpacity(0.05),
+            color: Colors.transparent,
             borderRadius: BorderRadius.circular(7),
             image: DecorationImage(
               image: NetworkImage(img),

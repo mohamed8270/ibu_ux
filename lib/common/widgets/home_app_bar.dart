@@ -38,7 +38,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
               },
               hoverColor: Colors.transparent,
               child: txt.textWidget(StaticData.appname, 13.0, FontWeight.w300,
-                  isHover[4] ? iwhite : iwhite.withOpacity(0.3)),
+                  isHover[4] ? iwhite : iwhite.withOpacity(0.4)),
             ),
             Expanded(
               child: Row(
@@ -57,7 +57,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                         StaticData.linked,
                         12.0,
                         FontWeight.w300,
-                        isHover[0] ? Colors.blue : iwhite.withOpacity(0.3)),
+                        isHover[0] ? Colors.blue : iwhite.withOpacity(0.4)),
                   ),
                   Gap(scrnsize.width / 30),
                   InkWell(
@@ -72,7 +72,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                         StaticData.gitHub,
                         12.0,
                         FontWeight.w300,
-                        isHover[1] ? Colors.purple : iwhite.withOpacity(0.3)),
+                        isHover[1] ? Colors.purple : iwhite.withOpacity(0.4)),
                   ),
                   Gap(scrnsize.width / 30),
                   InkWell(
@@ -89,7 +89,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                         FontWeight.w300,
                         isHover[2]
                             ? Colors.pink[800]
-                            : iwhite.withOpacity(0.3)),
+                            : iwhite.withOpacity(0.4)),
                   ),
                   Gap(scrnsize.width / 30),
                   InkWell(
@@ -104,7 +104,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                         StaticData.yout,
                         12.0,
                         FontWeight.w300,
-                        isHover[3] ? Colors.red : iwhite.withOpacity(0.3)),
+                        isHover[3] ? Colors.red : iwhite.withOpacity(0.4)),
                   ),
                 ],
               ),

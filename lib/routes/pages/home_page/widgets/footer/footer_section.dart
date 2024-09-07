@@ -96,7 +96,7 @@ class SocialIcons extends StatelessWidget {
         path,
         height: size,
         width: size,
-        colorFilter: const ColorFilter.mode(iblack, BlendMode.srcIn),
+        colorFilter: const ColorFilter.mode(iwhite, BlendMode.srcIn),
       ),
     );
   }
